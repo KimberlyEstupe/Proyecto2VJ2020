@@ -1,25 +1,37 @@
 package kimberlyestupe.proyecto2vj2020;
-
+import javax.swing.JOptionPane;//JOptionPane.showMessageDialog(null, "Aux: "+Cabeza.DPI, "ERROR", JOptionPane.ERROR_MESSAGE);
+import Ventanas.Conductores;
+import Ventanas.RutasIn;
 /**
  *
  * @author KimberlyEstupe
  */
 public class Menu {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        DoblementeEnlazada DE=new DoblementeEnlazada();
+    public static void main(String[] args) {     
+        //Conductores C= new Conductores();
+        //RutasIn RI= new RutasIn();
+       
+   ListaAdyacencia LA = new ListaAdyacencia();
+        LA.Ingesar("Casa", "Jalapa", "3");
+        LA.Ingesar("Casa2", "Hurugua", "3");
+        LA.Ingesar("Casa4", "Madrid", "3");
+        LA.Ingesar("Pisto", "Jamica", "3");
+        LA.Ingesar("Pisto", "Puerto Rico", "3");
+        LA.Ingesar("Hogar", "Madrid", "3");
+        LA.Ingesar("Casa", "Holanda", "3");
+        LA.Ingesar("Casa", "Jalisco", "3");
+        LA.RListaAd();
         
-        DE.Insertar(20, 32, "Hola", 'A', "kk", "Nombre","Apellido");
-        DE.Insertar(35, 32, "Hola", 'A', "kk", "Nombre","Apellido");
-        DE.Insertar(45, 32, "Hola", 'A', "kk", "Nombre","Apellido");
-        DE.Insertar(22, 32, "Hola", 'A', "kk", "Nombre","Apellido");
-        DE.Insertar(85, 32, "Hola", 'A', "kk", "Nombre","Apellido");
-        DE.Insertar(20, 32, "Hola", 'A', "kk", "Nombre2","Apellido");
-        DE.Insertar(10, 32, "Hola", 'A', "kk", "Nombre","Apellido");
-        DE.ReporteListaD();
+        
+    /*Ejeplo de Split
+        String dias = "Lunes,Martes,Miercoles,Jueves,Viernes,Sabado,Domingo";
+    String diaArray[] = dias.split(",");
+		
+    System.out.println("--Ejemplo 1--");
+    for(String dia : diaArray){
+	System.out.println(dia);
+        JOptionPane.showMessageDialog(null, "Aux: "+dia, "ERROR", JOptionPane.ERROR_MESSAGE);
+    }*/
         // TODO code application logic here
     }
     

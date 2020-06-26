@@ -2,20 +2,29 @@ digraph G {
  rankdir = Lista; 
    node [shape = rectangle fontname="Arial" fontsize="10"]
    graph [nodesep = 0.4]
-   label = < <font color='mediumvioletred'> <font point-size='20'> DOBLEMENTE   ENLAZADA </font></font>>;
+   label = < <font color='mediumvioletred'> <font point-size='20'>Doblemente Enlazada</font></font>>;
    labelloc = "t"; 
    {rank=same 
-      NDE10 [label= "Nombre,Apellido" ] 
-      NDE10 -> NDE20 [color=blue3][dir=both]
-      NDE20 [label= "Nombre,Apellido" ] 
-      NDE20 -> NDE22 [color=blue3][dir=both]
-      NDE22 [label= "Nombre,Apellido" ] 
-      NDE22 -> NDE35 [color=blue3][dir=both]
-      NDE35 [label= "Nombre,Apellido" ] 
-      NDE35 -> NDE45 [color=blue3][dir=both]
-      NDE45 [label= "Nombre,Apellido" ] 
-      NDE45 -> NDE85 [color=blue3][dir=both]
-      NDE85 [label= "Nombre,Apellido" ] 
-      NDE85 -> NDE10 [color=blue3][dir=both]
+      NDE336 [label= "DPI: 336
+ Nombre: gg 
+Apelliod: fff
+ Genero: Femenino
+ Telefono: fff
+ Tipo de Licencia: A" ] 
+      NDE336 -> NDE965 [color=blue3][dir=both]
+      NDE965 [label= "DPI: 965
+ Nombre: ff 
+Apelliod: ddf
+ Genero: Masculino
+ Telefono: fff
+ Tipo de Licencia: B" ] 
+      NDE965 -> NDE9655 [color=blue3][dir=both]
+      NDE9655 [label= "DPI: 9655
+ Nombre: dd 
+Apelliod: sss
+ Genero: Masculino
+ Telefono: dd
+ Tipo de Licencia: B" ] 
+      NDE9655 -> NDE336 [color=blue3][dir=both]
    }
 }

@@ -1,0 +1,13 @@
+digraph G { 
+ rankdir = Lista; 
+   node [shape = rectangle fontname="Arial" fontsize="10"]
+   graph [nodesep = 0.4]
+   label = < <font color='mediumvioletred'> <font point-size='20'>Lista de Rutas</font></font>>;
+   labelloc = "t"; 
+      NOCasa [label= "Casa" ] 
+      NOCasa -> NOCasa2      NOCasa2 [label= "Casa2" ] 
+      NOCasa2 -> NOCasa4      NOCasa4 [label= "Casa4" ] 
+      NOCasa4 -> NOPisto      NOPisto [label= "Pisto" ] 
+      NOPisto -> NOHogar      NOHogar [label= "Hogar" ] 
+   
+}

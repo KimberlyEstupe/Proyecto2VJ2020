@@ -14,12 +14,19 @@ import java.util.logging.Logger;
 public class Archivos {
     private static String TEMP_DIR = "c:\\temp";
     
-    public  void Archivo(String text, String fileName){
+    public  void Archivo(String titulo,String text, String fileName){
+        String texto="digraph G { \n rankdir = Lista; \n" +
+                        "   node [shape = rectangle fontname=\"Arial\" fontsize=\"10\"]\n" +
+                        "   graph [nodesep = 0.4]\n" +
+                        "   label = < <font color='mediumvioletred'> <font point-size='20'>"+ titulo +"</font></font>>;\n" +
+                        "   labelloc = \"t\"; \n" ;           
+            texto+=text;
+            texto+="   \n}";
         File file = new File(fileName);
         BufferedWriter buffer = null;
         try {
             buffer = new BufferedWriter(new FileWriter(file));
-            buffer.write(text+"\n");
+            buffer.write(texto+"\n");
         } catch (IOException e) {
             System.out.println("Error E/S: "+e);
         }
