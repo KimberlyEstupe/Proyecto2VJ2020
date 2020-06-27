@@ -11,13 +11,15 @@ import javax.swing.JOptionPane;//JOptionPane.showMessageDialog(null, "Aux: "+Cab
 public class DoblementeEnlazada {
     Archivos archivos=new Archivos();
     NodoDE Cabeza;
+    NodoDE nodobuscado;
     
     public DoblementeEnlazada(){
         Cabeza=null;
+        nodobuscado=null;
     }
     
     public void Insertar(String dpi, String tel, String direc, String tiL, String gen, String name, String lastname){
-        long dp=Long.parseLong(dpi);
+        long dp=Long.parseLong(dpi);        
         NodoDE nuevo=new NodoDE(dp,tel,direc,tiL,gen,name,lastname);
         if(Cabeza==null){
             Cabeza=nuevo;
@@ -50,30 +52,79 @@ public class DoblementeEnlazada {
                 } 
             }                        
         }
-        System. out. println("Ingresado\n"); 
+        JOptionPane.showMessageDialog(null, "Accion Ejecutada Exitosammente"); 
     }
     
     public void Eliminar(String dato){
-        long buscado=Long.parseLong(dato);
-        NodoDE Nbuscado=Buscar(buscado);
-        if(Nbuscado!=null){
-            NodoDE anterior=Nbuscado.Ante;
-            NodoDE siguiente=Nbuscado.Sig;
-            siguiente.Ante=anterior;
-            anterior.Sig=siguiente; 
-            if(Nbuscado==Cabeza) Cabeza=siguiente;
-            Nbuscado.Sig=null;
-            Nbuscado.Ante=null;
-            JOptionPane.showMessageDialog(null, "Dato Eliminado Exitosammente");
-        }
+        if(Cabeza!=null){
+            long buscado=Long.parseLong(dato);
+            NodoDE Nbuscado=Buscar(buscado);
+            if(Nbuscado!=null){
+                NodoDE anterior=Nbuscado.Ante;
+                NodoDE siguiente=Nbuscado.Sig;
+                siguiente.Ante=anterior;
+                anterior.Sig=siguiente; 
+                if(Nbuscado==Cabeza) Cabeza=siguiente;
+                Nbuscado.Sig=null;
+                Nbuscado.Ante=null;
+                JOptionPane.showMessageDialog(null, "Accion Ejecutada Exitosammente");
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "No hay datos ingresados");
+        } 
     }
     
-    public void MostrarInfo(String dato){
-        long buscado=Long.parseLong(dato);
-        NodoDE aux=Buscar(buscado);
-        if(aux!=null){
-            JOptionPane.showMessageDialog(null, "DPI: "+aux.DPI+"\n Nombre: "+aux.nombre+" \nApelliod: "+aux.apellido+"\n Genero: "+aux.genero+"\n Telefono: "+aux.telefono+"\n Tipo de Licencia: "+aux.tipoL);
-        }
+    public void Modificar(String anterior, String dato, String tel, String direc, String tiL, String gen, String name, String lastname){
+        Eliminar(anterior);
+        Insertar(dato, tel, direc, tiL, gen, name, lastname);
+    }
+    
+    public String MostrarInfo(String dato){
+        if(Cabeza!=null){
+            long buscado=Long.parseLong(dato);
+            NodoDE aux=Buscar(buscado);
+            if(aux!=null){
+                JOptionPane.showMessageDialog(null, "DATOS ACTUALES: \nDPI: "+aux.DPI+"\n Nombre: "+aux.nombre+" \nApelliod: "+aux.apellido+"\n Genero: "+aux.genero+"\n Telefono: "+aux.telefono+"\n Tipo de Licencia: "+aux.tipoL);
+                nodobuscado=aux;
+                return aux.nombre;
+            }else{
+                JOptionPane.showMessageDialog(null, "Ese DPI no existe");
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "No hay datos ingresados");
+        } 
+        nodobuscado=null;
+        return "";
+    }
+    
+    public String MiDpi(){
+        return String.valueOf(nodobuscado.DPI);
+    }
+    public String Apellido(){
+        return nodobuscado.apellido;
+    }
+    
+    public String Direccion(){
+        return nodobuscado.direccion;
+    }
+    
+    public String Telefono(){
+        return nodobuscado.telefono;
+    }
+    
+    public int Genero(){
+        int index=0;
+        if(nodobuscado.genero=="Femenino") index=0;
+        else if(nodobuscado.genero=="Masculino") index=1;
+        return index;
+    }
+    
+    public int MiLincencia(){
+        int index=0;
+        if (nodobuscado.tipoL=="A") index=0;
+        else if (nodobuscado.tipoL=="B") index=1;
+        else if (nodobuscado.tipoL=="C") index=2;
+        return index;
     }
     
     public NodoDE Buscar(long buscar){
@@ -85,6 +136,17 @@ public class DoblementeEnlazada {
             }while(aux!=Cabeza);
         }
         return null;
+    }
+    
+    public void CargMasiva(String filaname){
+        String leer[]= archivos.leerArchivo(filaname);        
+        String datos[];
+        for(String linea : leer){
+	       datos = linea.split("%");
+               for(String dos : datos){
+                   System.out.println(dos);
+               }
+        }
     }
     
     public void ReporteListaD(){

@@ -13,25 +13,26 @@ public class ListaAdyacencia {
         Inicio=null;
     }
     public void Ingesar(String origen, String Destino, String tiempo){
-        NodoLA Origen=Origen(origen);
-        NodoLA NEW=new NodoLA(origen,Destino,tiempo);
+        NodoLA norigen=Origen(origen);
+        NodoLA NEW=new NodoLA(origen,Destino,tiempo,norigen.cabecera,0);
         //JOptionPane.showMessageDialog(null,"Destino "+Origen.CiudadOrigen);
-        Destinos(Origen,NEW);
+        Destinos(norigen,NEW);
     }
     
-    private NodoLA Origen(String Origen){        
-        NodoLA nuevo=new NodoLA(Origen,"","");
+    private NodoLA Origen(String Origen){       
         if(Inicio==null){
-            Inicio=nuevo;
-            return nuevo;
+            Inicio=new NodoLA(Origen,"","",0,0);
+            return Inicio;
         }else{
+            
             NodoLA aux=Inicio;
             while((aux.Abajo!=null) && (aux.CiudadOrigen!=Origen)){
                 aux=aux.Abajo;
-            }
+            }            
             if(aux.CiudadOrigen==Origen){    
                 return aux;
             }else if(aux.Abajo==null){
+                NodoLA nuevo=new NodoLA(Origen,"","",aux.cabecera+1,0);
                 aux.Abajo=nuevo;
                 nuevo.Arriba=aux;
                 return nuevo;
@@ -46,6 +47,7 @@ public class ListaAdyacencia {
             nuevo.Anterior=Norigen;
         }else{
             NodoLA segundo=Norigen.Siguiente;
+            nuevo.lista=segundo.lista+1;
             nuevo.Siguiente=segundo;
             segundo.Anterior=nuevo;
             Norigen.Siguiente=nuevo;
@@ -56,33 +58,68 @@ public class ListaAdyacencia {
     public void RListaAd(){        
         if(Inicio!=null){
             String text=RecorridoLista();
-            archivos.Archivo("Lista de Rutas", text, "ListaAdyacencia.txt");
+            archivos.Archivo("LISTA DE RUTAS", text, "ListaAdyacencia.txt");
         }else{
             JOptionPane.showMessageDialog(null, "NO HAY RUTAS INGRESADAS ", "ERROR", JOptionPane.ERROR_MESSAGE);
         }
     }
     
     public String RecorridoLista(){
+        String texto="";
         if(Inicio!=null){
             NodoLA aux=Inicio;
-            String texto="";
-            texto+="      NO"+aux.CiudadOrigen+" [label= \""+aux.CiudadOrigen+"\" ] \n";
-            while(aux.Abajo!=null){
-                texto+="      NO"+aux.CiudadOrigen+" -> NO"+aux.Abajo.CiudadOrigen;
+            NodoLA auxX;
+            do{
+                texto+="      NO"+aux.cabecera+" [label= \""+aux.CiudadOrigen+"\" ] \n";
+                auxX=aux.Siguiente;
+                //-------Destinos-----
+                texto+="      rank=same{ \n";
+                texto+="        NO"+aux.cabecera+" -> ND"+auxX.cabecera+auxX.lista+"\n";
+                texto+="        ND"+auxX.cabecera+auxX.lista+" [label= \""+auxX.CiudadDestino+"\" ] \n";
+                        while(auxX.Siguiente!=null){
+                            texto+="        ND"+auxX.cabecera+auxX.lista+" -> ND"+auxX.cabecera+auxX.Siguiente.lista+"\n";
+                            auxX=auxX.Siguiente;
+                            texto+="        ND"+auxX.cabecera+auxX.lista+" [label= \""+auxX.CiudadDestino+"\" ] \n";
+                        }
+                texto+="      }";
+                ////---Fin de destinos
+                if(aux.Abajo!=null){
+                    texto+="      NO"+aux.cabecera+" -> NO"+aux.Abajo.cabecera+"[arrowhead=none] \n";
+                }                
                 aux=aux.Abajo;
-                texto+="      NO"+aux.CiudadOrigen+" [label= \""+aux.CiudadOrigen+"\" ] \n";
-            }
+            }while(aux!=null);         
             
             
-            
-            
-            
-            return texto;
         }else{
             JOptionPane.showMessageDialog(null, "NO HAY RUTAS INGRESADAS ", "ERROR", JOptionPane.ERROR_MESSAGE);
-            return null;
-        }        
+            texto="label=\"Sin datos ingresados\";";
+        }  
+        return texto;
     }
+    
+    public void RGrafo(){
+        if(Inicio!=null){
+            String text=RecorridoLista();
+            archivos.Archivo("MAPA DE RUTAS", text, "Grafo.txt");
+            
+        }else{
+            JOptionPane.showMessageDialog(null, "NO HAY RUTAS INGRESADAS ", "ERROR", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
+    public String Grafo(){        
+        String texto="";
+        if(Inicio!=null){
+            NodoLA aux=Inicio;
+            texto+="      NO"+aux.cabecera+" [label= \""+aux.CiudadOrigen+"\" ] \n";
+        }else{
+            JOptionPane.showMessageDialog(null, "NO HAY RUTAS INGRESADAS ", "ERROR", JOptionPane.ERROR_MESSAGE);
+            texto="label=\"Sin datos ingresados\";";
+        }   
+        return texto;
+    }
+    
+    
     private class NodoLA{
         NodoLA Abajo;
         NodoLA Siguiente;
@@ -91,7 +128,10 @@ public class ListaAdyacencia {
         String CiudadOrigen;
         String CiudadDestino;
         String Tiempo;
-        NodoLA(String Origen, String Destino, String tiempo){
+        int cabecera;
+        int lista;
+        //int grafo;
+        NodoLA(String Origen, String Destino, String tiempo, int cabeza, int lis){
             Abajo=null;
             Siguiente =null;
             Anterior=null;
@@ -99,6 +139,8 @@ public class ListaAdyacencia {
             CiudadOrigen=Origen;
             CiudadDestino=Destino;
             Tiempo=tiempo;
+            cabecera=cabeza;
+            lista=lis;
         }
     }
 }

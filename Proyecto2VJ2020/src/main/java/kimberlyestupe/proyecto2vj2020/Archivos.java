@@ -1,7 +1,10 @@
 package kimberlyestupe.proyecto2vj2020;
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -56,5 +59,34 @@ public class Archivos {
         }
     }
     
+    //----------------ABRIR ARCHIVO-----------
+    public  String[] leerArchivo(String fileName){
+        File file = new File(fileName);
+        BufferedReader buffer = null;
+        String cad  ="";
+        try {
+            buffer = new BufferedReader(new FileReader(file));
+            while(buffer.ready()){
+                cad+=buffer.readLine();
+                if(buffer.ready()){
+                    cad += "\n";
+                }
+            }
+            return cad.split(";\n");
+        } catch (FileNotFoundException ex) {
+        } catch (IOException ex) {
+        }
+        finally{
+            try {
+                buffer.close();
+                } catch (IOException ex) {
+                Logger.getLogger(Archivos.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return null;
+        
+    }
+    
     
 }
+

@@ -2,12 +2,44 @@ digraph G {
  rankdir = Lista; 
    node [shape = rectangle fontname="Arial" fontsize="10"]
    graph [nodesep = 0.4]
-   label = < <font color='mediumvioletred'> <font point-size='20'>Lista de Rutas</font></font>>;
+   label = < <font color='mediumvioletred'> <font point-size='20'>LISTA DE RUTAS</font></font>>;
    labelloc = "t"; 
-      NOCasa [label= "Casa" ] 
-      NOCasa -> NOCasa2      NOCasa2 [label= "Casa2" ] 
-      NOCasa2 -> NOCasa4      NOCasa4 [label= "Casa4" ] 
-      NOCasa4 -> NOPisto      NOPisto [label= "Pisto" ] 
-      NOPisto -> NOHogar      NOHogar [label= "Hogar" ] 
-   
+      NO0 [label= "Santa Ana" ] 
+      rank=same{ 
+        NO0 -> ND00
+        ND00 [label= "Jalapa" ] 
+      }      NO0 -> NO1[arrowhead=none] 
+      NO1 [label= "Nueva York" ] 
+      rank=same{ 
+        NO1 -> ND10
+        ND10 [label= "Hurugua" ] 
+      }      NO1 -> NO2[arrowhead=none] 
+      NO2 [label= "San Marcos" ] 
+      rank=same{ 
+        NO2 -> ND22
+        ND22 [label= "Santa Ana" ] 
+        ND22 -> ND21
+        ND21 [label= "Casa" ] 
+        ND21 -> ND20
+        ND20 [label= "Madrid" ] 
+      }      NO2 -> NO3[arrowhead=none] 
+      NO3 [label= "Pisto" ] 
+      rank=same{ 
+        NO3 -> ND31
+        ND31 [label= "Puerto Rico" ] 
+        ND31 -> ND30
+        ND30 [label= "Jamica" ] 
+      }      NO3 -> NO4[arrowhead=none] 
+      NO4 [label= "Hogar" ] 
+      rank=same{ 
+        NO4 -> ND40
+        ND40 [label= "Madrid" ] 
+      }      NO4 -> NO5[arrowhead=none] 
+      NO5 [label= "Casa" ] 
+      rank=same{ 
+        NO5 -> ND51
+        ND51 [label= "Jalisco" ] 
+        ND51 -> ND50
+        ND50 [label= "Holanda" ] 
+      }   
 }

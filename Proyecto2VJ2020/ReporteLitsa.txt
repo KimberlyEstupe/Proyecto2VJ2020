@@ -5,26 +5,38 @@ digraph G {
    label = < <font color='mediumvioletred'> <font point-size='20'>Doblemente Enlazada</font></font>>;
    labelloc = "t"; 
    {rank=same 
-      NDE336 [label= "DPI: 336
- Nombre: gg 
-Apelliod: fff
- Genero: Femenino
- Telefono: fff
- Tipo de Licencia: A" ] 
-      NDE336 -> NDE965 [color=blue3][dir=both]
-      NDE965 [label= "DPI: 965
- Nombre: ff 
-Apelliod: ddf
- Genero: Masculino
- Telefono: fff
- Tipo de Licencia: B" ] 
-      NDE965 -> NDE9655 [color=blue3][dir=both]
-      NDE9655 [label= "DPI: 9655
- Nombre: dd 
-Apelliod: sss
- Genero: Masculino
- Telefono: dd
- Tipo de Licencia: B" ] 
-      NDE9655 -> NDE336 [color=blue3][dir=both]
+      NDE366 [label= "DPI: 366
+         Nombre: ppo 
+         Apelliod: jjj
+         Genero: Masculino
+         Telefono: kk
+         Tipo de Licencia: B
+         Direccion: hhh" ] 
+      NDE366 -> NDE5236 [color=blue3][dir=both]
+      NDE5236 [label= "DPI: 5236
+         Nombre: pool 
+         Apelliod: jjj
+         Genero: Femenino
+         Telefono: llk
+         Tipo de Licencia: A
+         Direccion: yyt" ] 
+      NDE5236 -> NDE98021 [color=blue3][dir=both]
+      NDE98021 [label= "DPI: 98021
+         Nombre: poll 
+         Apelliod: jjj
+         Genero: Masculino
+         Telefono: jjj
+         Tipo de Licencia: C
+         Direccion: iiuy" ] 
+      NDE98021 -> NDE98565 [color=blue3][dir=both]
+      NDE98565 [label= "DPI: 98565
+         Nombre: lsñooo 
+         Apelliod: jjj
+         Genero: Masculino
+         Telefono: jjh
+         Tipo de Licencia: A
+         Direccion: yyy" ] 
+      NDE98565 -> NDE366 [color=blue3][dir=both]
    }
+   
 }

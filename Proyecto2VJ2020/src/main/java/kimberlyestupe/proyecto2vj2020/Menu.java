@@ -2,25 +2,30 @@ package kimberlyestupe.proyecto2vj2020;
 import javax.swing.JOptionPane;//JOptionPane.showMessageDialog(null, "Aux: "+Cabeza.DPI, "ERROR", JOptionPane.ERROR_MESSAGE);
 import Ventanas.Conductores;
 import Ventanas.RutasIn;
+import Ventanas.DoblementeEnlazada;
 /**
  *
  * @author KimberlyEstupe
  */
 public class Menu {
     public static void main(String[] args) {     
-        //Conductores C= new Conductores();
-        //RutasIn RI= new RutasIn();
+        Conductores Con= new Conductores();
+        Con.setVisible(true);
+//        RutasIn RI= new RutasIn();
+//        RI.setVisible(true);
        
-   ListaAdyacencia LA = new ListaAdyacencia();
-        LA.Ingesar("Casa", "Jalapa", "3");
-        LA.Ingesar("Casa2", "Hurugua", "3");
-        LA.Ingesar("Casa4", "Madrid", "3");
+    /*ListaAdyacencia LA = new ListaAdyacencia();
+        LA.Ingesar("Santa Ana", "Jalapa", "3");
+        LA.Ingesar("Nueva York", "Hurugua", "3");
+        LA.Ingesar("San Marcos", "Madrid", "3");
         LA.Ingesar("Pisto", "Jamica", "3");
+        LA.Ingesar("San Marcos", "Casa", "3");
         LA.Ingesar("Pisto", "Puerto Rico", "3");
         LA.Ingesar("Hogar", "Madrid", "3");
         LA.Ingesar("Casa", "Holanda", "3");
         LA.Ingesar("Casa", "Jalisco", "3");
-        LA.RListaAd();
+        LA.Ingesar("San Marcos", "Santa Ana", "3");
+        LA.RListaAd();*/
         
         
     /*Ejeplo de Split
