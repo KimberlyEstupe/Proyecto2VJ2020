@@ -16,6 +16,7 @@ TablaH TH = new TablaH();
         initComponents();
         this.getContentPane().setBackground(Color.PINK);
         this.setLocationRelativeTo(null);
+        TH.CargaMasiva("Clientes.txt");
     }
 
     /**

@@ -35,7 +35,7 @@ public class DoblementeEnlazada {
                 Cabeza=nuevo;
             }else{
                 while(aux.Sig!=Cabeza && aux.Sig.DPI<=dp){
-                aux=aux.Sig;
+                    aux=aux.Sig;
                 }
                 if(aux.DPI==dp){}
                 else if(aux.Sig.DPI>dp){
