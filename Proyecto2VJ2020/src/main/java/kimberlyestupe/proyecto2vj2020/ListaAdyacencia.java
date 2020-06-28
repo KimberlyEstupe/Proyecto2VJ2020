@@ -12,11 +12,25 @@ public class ListaAdyacencia {
     public ListaAdyacencia(){
         Inicio=null;
     }
+    
+    public void CargMasivaA(String filaname){
+        String leer[]= archivos.leerArchivo(filaname);  
+        String juntos;
+        String divicion[];
+        for(int i = 0; i<leer.length; i++){
+            juntos=leer[i];
+            divicion = juntos.split("/");
+                    String dir = divicion[2].substring(0, divicion[2].length() - 1);
+                    Ingesar(divicion[0],divicion[1],dir);
+        }
+        
+    }
+    
     public void Ingesar(String origen, String Destino, String tiempo){
         NodoLA norigen=Origen(origen);
         NodoLA NEW=new NodoLA(origen,Destino,tiempo,norigen.cabecera,0);
-        //JOptionPane.showMessageDialog(null,"Destino "+Origen.CiudadOrigen);
         Destinos(norigen,NEW);
+        JOptionPane.showMessageDialog(null,"Ingreso Exitoso ");
     }
     
     private NodoLA Origen(String Origen){       
@@ -26,10 +40,10 @@ public class ListaAdyacencia {
         }else{
             
             NodoLA aux=Inicio;
-            while((aux.Abajo!=null) && (aux.CiudadOrigen!=Origen)){
+            while((aux.Abajo!=null) && !(aux.CiudadOrigen.equalsIgnoreCase(Origen))){
                 aux=aux.Abajo;
             }            
-            if(aux.CiudadOrigen==Origen){    
+            if(aux.CiudadOrigen.equalsIgnoreCase(Origen)){    
                 return aux;
             }else if(aux.Abajo==null){
                 NodoLA nuevo=new NodoLA(Origen,"","",aux.cabecera+1,0);
@@ -75,11 +89,11 @@ public class ListaAdyacencia {
                 //-------Destinos-----
                 texto+="      rank=same{ \n";
                 texto+="        NO"+aux.cabecera+" -> ND"+auxX.cabecera+auxX.lista+"\n";
-                texto+="        ND"+auxX.cabecera+auxX.lista+" [label= \""+auxX.CiudadDestino+"\" ] \n";
+                texto+="        ND"+auxX.cabecera+auxX.lista+" [label= \""+auxX.CiudadDestino+" "+auxX.Tiempo+"\" ] \n";
                         while(auxX.Siguiente!=null){
                             texto+="        ND"+auxX.cabecera+auxX.lista+" -> ND"+auxX.cabecera+auxX.Siguiente.lista+"\n";
                             auxX=auxX.Siguiente;
-                            texto+="        ND"+auxX.cabecera+auxX.lista+" [label= \""+auxX.CiudadDestino+"\" ] \n";
+                            texto+="        ND"+auxX.cabecera+auxX.lista+" [label= \""+auxX.CiudadDestino+" "+auxX.Tiempo+"\" ] \n";
                         }
                 texto+="      }";
                 ////---Fin de destinos

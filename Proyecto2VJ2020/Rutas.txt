@@ -1,0 +1,6 @@
+Oviedo/Bilbao/304%
+Bilbao/Zaragoza/324%
+Bilbao/Valladolid/338%
+Zaragoza/Barcelona/258%
+Barcelona/Gerona/158%
+Zaragoza/Madrid/784%

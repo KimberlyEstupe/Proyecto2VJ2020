@@ -72,7 +72,7 @@ public class Archivos {
                     cad += "\n";
                 }
             }
-            return cad.split(";\n");
+            return cad.split("\n");
         } catch (FileNotFoundException ex) {
         } catch (IOException ex) {
         }

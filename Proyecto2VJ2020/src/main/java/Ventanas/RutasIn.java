@@ -2,6 +2,7 @@
 package Ventanas;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 import kimberlyestupe.proyecto2vj2020.ListaAdyacencia;
 /**
  *
@@ -147,18 +148,8 @@ public class RutasIn extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-        LA.Ingesar("Santa Ana", "Jalapa", "3");
-        LA.Ingesar("Nueva York", "Hurugua", "3");
-        LA.Ingesar("San Marcos", "Madrid", "3");
-        LA.Ingesar("Pisto", "Jamica", "3");
-        LA.Ingesar("San Marcos", "Casa", "3");
-        LA.Ingesar("Pisto", "Puerto Rico", "3");
-        LA.Ingesar("Hogar", "Madrid", "3");
-        LA.Ingesar("Casa", "Holanda", "3");
-        LA.Ingesar("Casa", "Jalisco", "3");
-        LA.Ingesar("San Marcos", "Santa Ana", "3");
-        
+        String filaname = JOptionPane.showInputDialog("Ingrese el nombre del documento: ");
+        LA.CargMasivaA(filaname);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed

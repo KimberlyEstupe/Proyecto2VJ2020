@@ -18,9 +18,9 @@ public class DoblementeEnlazada {
         nodobuscado=null;
     }
     
-    public void Insertar(String dpi, String tel, String direc, String tiL, String gen, String name, String lastname){
+    public void Insertar(String dpi, String tel, String direc, String tiL, String gen, String name, String lastname, String nacimiento){
         long dp=Long.parseLong(dpi);        
-        NodoDE nuevo=new NodoDE(dp,tel,direc,tiL,gen,name,lastname);
+        NodoDE nuevo=new NodoDE(dp,tel,direc,tiL,gen,name,lastname, nacimiento);
         if(Cabeza==null){
             Cabeza=nuevo;
             Cabeza.Sig=Cabeza;      
@@ -52,7 +52,7 @@ public class DoblementeEnlazada {
                 } 
             }                        
         }
-        JOptionPane.showMessageDialog(null, "Accion Ejecutada Exitosammente"); 
+        JOptionPane.showMessageDialog(null, "Nuevo conductor ingresado correctamente"); 
     }
     
     public void Eliminar(String dato){
@@ -74,9 +74,23 @@ public class DoblementeEnlazada {
         } 
     }
     
-    public void Modificar(String anterior, String dato, String tel, String direc, String tiL, String gen, String name, String lastname){
-        Eliminar(anterior);
-        Insertar(dato, tel, direc, tiL, gen, name, lastname);
+    public void Modificar(String anterior, String dato, String tel, String direc, String tiL, String gen, String name, String lastname, String nacimiento){
+       if(Cabeza!=null){
+            NodoDE Nbuscado=Buscar(Long.parseLong(anterior));
+            if(Nbuscado!=null){
+                long dp=Long.parseLong(dato);   
+                Nbuscado.DPI=dp;
+                Nbuscado.nombre=name;
+                Nbuscado.apellido=lastname;
+                Nbuscado.Nacimiento=nacimiento;
+                Nbuscado.telefono=tel;
+                Nbuscado.direccion=direc;
+                Nbuscado.genero=gen;
+                JOptionPane.showMessageDialog(null, "DATOS ACTUALIZADOS: \n DPI: "+Nbuscado.DPI+"\n Nombre: "+Nbuscado.nombre+" \n Apelliod: "+Nbuscado.apellido+"\n Genero: "+Nbuscado.genero+"\n Telefono: "+Nbuscado.telefono+"\n Tipo de Licencia: "+Nbuscado.tipoL+"\n Fecha de nacimiento: "+Nbuscado.Nacimiento);
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "No hay datos ingresados");
+        }
     }
     
     public String MostrarInfo(String dato){
@@ -84,7 +98,7 @@ public class DoblementeEnlazada {
             long buscado=Long.parseLong(dato);
             NodoDE aux=Buscar(buscado);
             if(aux!=null){
-                JOptionPane.showMessageDialog(null, "DATOS ACTUALES: \nDPI: "+aux.DPI+"\n Nombre: "+aux.nombre+" \nApelliod: "+aux.apellido+"\n Genero: "+aux.genero+"\n Telefono: "+aux.telefono+"\n Tipo de Licencia: "+aux.tipoL);
+                JOptionPane.showMessageDialog(null, "DATOS ACTUALES: \nDPI: "+aux.DPI+"\n Nombre: "+aux.nombre+" \nApelliod: "+aux.apellido+"\n Genero: "+aux.genero+". \n Telefono: "+aux.telefono+"\n Tipo de Licencia: "+aux.tipoL);
                 nodobuscado=aux;
                 return aux.nombre;
             }else{
@@ -111,20 +125,21 @@ public class DoblementeEnlazada {
     public String Telefono(){
         return nodobuscado.telefono;
     }
+    public String Nacimiento(){
+        return nodobuscado.Nacimiento;
+    }
     
     public int Genero(){
-        int index=0;
-        if(nodobuscado.genero=="Femenino") index=0;
-        else if(nodobuscado.genero=="Masculino") index=1;
-        return index;
+        if(nodobuscado.genero.equalsIgnoreCase("Femenino")) return 0;
+        else if(nodobuscado.genero.equalsIgnoreCase("Masculino")) return 1;
+        return -1;
     }
     
     public int MiLincencia(){
-        int index=0;
-        if (nodobuscado.tipoL=="A") index=0;
-        else if (nodobuscado.tipoL=="B") index=1;
-        else if (nodobuscado.tipoL=="C") index=2;
-        return index;
+        if (nodobuscado.tipoL.equalsIgnoreCase("A")) return 0;
+        else if (nodobuscado.tipoL.equalsIgnoreCase("B")) return 1;
+        else if (nodobuscado.tipoL.equalsIgnoreCase("C")) return 2;
+        return -1;
     }
     
     public NodoDE Buscar(long buscar){
@@ -139,13 +154,15 @@ public class DoblementeEnlazada {
     }
     
     public void CargMasiva(String filaname){
-        String leer[]= archivos.leerArchivo(filaname);        
-        String datos[];
-        for(String linea : leer){
-	       datos = linea.split("%");
-               for(String dos : datos){
-                   System.out.println(dos);
-               }
+        String leer[]= archivos.leerArchivo(filaname);  
+        String juntos;
+        String divicion[];
+        
+        for(int i = 0; i<leer.length; i++){
+            juntos=leer[i];
+            divicion = juntos.split("%");
+                    String dir = divicion[7].substring(0, divicion[7].length() - 1);
+                    Insertar(divicion[0], divicion[6], dir, divicion[3], divicion[4], divicion[1], divicion[2], divicion[5]);            
         }
     }
     
@@ -184,8 +201,9 @@ public class DoblementeEnlazada {
         public String genero;
         public String direccion;
         public String nombre;
-        public String apellido;        
-        public NodoDE(long dpi, String tel, String direc, String tiL, String gen, String name, String lastname){
+        public String apellido;  
+        public String Nacimiento;
+        public NodoDE(long dpi, String tel, String direc, String tiL, String gen, String name, String lastname, String nacimiento){
             Sig = null;
             Ante = null;
             tipoL = tiL;
@@ -195,6 +213,7 @@ public class DoblementeEnlazada {
             direccion = direc;
             nombre=name;
             apellido=lastname;
+            Nacimiento = nacimiento;
         }
     }   
 }

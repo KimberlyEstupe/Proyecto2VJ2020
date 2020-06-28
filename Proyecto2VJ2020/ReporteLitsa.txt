@@ -5,38 +5,54 @@ digraph G {
    label = < <font color='mediumvioletred'> <font point-size='20'>Doblemente Enlazada</font></font>>;
    labelloc = "t"; 
    {rank=same 
-      NDE366 [label= "DPI: 366
-         Nombre: ppo 
-         Apelliod: jjj
-         Genero: Masculino
-         Telefono: kk
-         Tipo de Licencia: B
-         Direccion: hhh" ] 
-      NDE366 -> NDE5236 [color=blue3][dir=both]
-      NDE5236 [label= "DPI: 5236
-         Nombre: pool 
-         Apelliod: jjj
+      NDE1025654489635 [label= "DPI: 1025654489635
+         Nombre: OJG 
+         Apelliod: FFYS
          Genero: Femenino
-         Telefono: llk
+         Telefono: 3225
+         Tipo de Licencia: B
+         Direccion: Alemania;" ] 
+      NDE1025654489635 -> NDE1234567890123 [color=blue3][dir=both]
+      NDE1234567890123 [label= "DPI: 1234567890123
+         Nombre: NKI 
+         Apelliod: SUJY
+         Genero: Femenino
+         Telefono: 987456
          Tipo de Licencia: A
-         Direccion: yyt" ] 
-      NDE5236 -> NDE98021 [color=blue3][dir=both]
-      NDE98021 [label= "DPI: 98021
-         Nombre: poll 
-         Apelliod: jjj
+         Direccion: GUATEMLA;" ] 
+      NDE1234567890123 -> NDE2587463256641 [color=blue3][dir=both]
+      NDE2587463256641 [label= "DPI: 2587463256641
+         Nombre: DFG 
+         Apelliod: FHYH
          Genero: Masculino
-         Telefono: jjj
+         Telefono: 99874
+         Tipo de Licencia: A
+         Direccion: Brasil;" ] 
+      NDE2587463256641 -> NDE5874693215635 [color=blue3][dir=both]
+      NDE5874693215635 [label= "DPI: 5874693215635
+         Nombre: DDG 
+         Apelliod: SEDR
+         Genero: Masculino
+         Telefono: 87458
+         Tipo de Licencia: B
+         Direccion: Jalapa;" ] 
+      NDE5874693215635 -> NDE7463028256641 [color=blue3][dir=both]
+      NDE7463028256641 [label= "DPI: 7463028256641
+         Nombre: DFG 
+         Apelliod: FHYH
+         Genero: Masculino
+         Telefono: 98745
          Tipo de Licencia: C
-         Direccion: iiuy" ] 
-      NDE98021 -> NDE98565 [color=blue3][dir=both]
-      NDE98565 [label= "DPI: 98565
-         Nombre: lsñooo 
-         Apelliod: jjj
-         Genero: Masculino
-         Telefono: jjh
-         Tipo de Licencia: A
-         Direccion: yyy" ] 
-      NDE98565 -> NDE366 [color=blue3][dir=both]
+         Direccion: Nicaragua;" ] 
+      NDE7463028256641 -> NDE8746932660256 [color=blue3][dir=both]
+      NDE8746932660256 [label= "DPI: 8746932660256
+         Nombre: ERT 
+         Apelliod: JJHO
+         Genero: Femenino
+         Telefono: 20555
+         Tipo de Licencia: C
+         Direccion: Guadalajara;" ] 
+      NDE8746932660256 -> NDE1025654489635 [color=blue3][dir=both]
    }
    
 }

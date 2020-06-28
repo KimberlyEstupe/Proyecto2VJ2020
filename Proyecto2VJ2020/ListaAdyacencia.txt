@@ -4,42 +4,28 @@ digraph G {
    graph [nodesep = 0.4]
    label = < <font color='mediumvioletred'> <font point-size='20'>LISTA DE RUTAS</font></font>>;
    labelloc = "t"; 
-      NO0 [label= "Santa Ana" ] 
+      NO0 [label= "Oviedo" ] 
       rank=same{ 
         NO0 -> ND00
-        ND00 [label= "Jalapa" ] 
+        ND00 [label= "Bilbao 304" ] 
       }      NO0 -> NO1[arrowhead=none] 
-      NO1 [label= "Nueva York" ] 
+      NO1 [label= "Bilbao" ] 
       rank=same{ 
-        NO1 -> ND10
-        ND10 [label= "Hurugua" ] 
+        NO1 -> ND11
+        ND11 [label= "Valladolid 338" ] 
+        ND11 -> ND10
+        ND10 [label= "Zaragoza 324" ] 
       }      NO1 -> NO2[arrowhead=none] 
-      NO2 [label= "San Marcos" ] 
+      NO2 [label= "Zaragoza" ] 
       rank=same{ 
-        NO2 -> ND22
-        ND22 [label= "Santa Ana" ] 
-        ND22 -> ND21
-        ND21 [label= "Casa" ] 
+        NO2 -> ND21
+        ND21 [label= "Madrid 784" ] 
         ND21 -> ND20
-        ND20 [label= "Madrid" ] 
+        ND20 [label= "Barcelona 258" ] 
       }      NO2 -> NO3[arrowhead=none] 
-      NO3 [label= "Pisto" ] 
+      NO3 [label= "Barcelona" ] 
       rank=same{ 
-        NO3 -> ND31
-        ND31 [label= "Puerto Rico" ] 
-        ND31 -> ND30
-        ND30 [label= "Jamica" ] 
-      }      NO3 -> NO4[arrowhead=none] 
-      NO4 [label= "Hogar" ] 
-      rank=same{ 
-        NO4 -> ND40
-        ND40 [label= "Madrid" ] 
-      }      NO4 -> NO5[arrowhead=none] 
-      NO5 [label= "Casa" ] 
-      rank=same{ 
-        NO5 -> ND51
-        ND51 [label= "Jalisco" ] 
-        ND51 -> ND50
-        ND50 [label= "Holanda" ] 
+        NO3 -> ND30
+        ND30 [label= "Gerona 158" ] 
       }   
 }

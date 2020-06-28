@@ -1,0 +1,3 @@
+125469874563, Jose Carlos, Lopez Morales, Masculino, 17/08/1982,12547896, 17-01 Z.6 Ciudad deGuatemala;
+358450025665, Ana Gabriera, Perez Corado, Femenino, 09/05/1822,12365478, 5av calle emperador Ciudad de Guatemala;
+225469887114, Maria del Carmen, Lopez Juarez, Femenino, 22/04/1940,95478032, 6ta calle Ciudad de Guatemala;
