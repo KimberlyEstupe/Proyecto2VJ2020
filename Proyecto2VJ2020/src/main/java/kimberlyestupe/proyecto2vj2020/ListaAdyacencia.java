@@ -113,7 +113,8 @@ public class ListaAdyacencia {
     
     public void RGrafo(){
         if(Inicio!=null){
-            String text=RecorridoLista();
+            String text=" rankdir = Lista; \n ";
+            text+=RecorridoLista();
             archivos.Archivo("MAPA DE RUTAS", text, "Grafo.txt");
             
         }else{

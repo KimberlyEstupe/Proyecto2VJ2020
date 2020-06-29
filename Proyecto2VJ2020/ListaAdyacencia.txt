@@ -1,5 +1,4 @@
 digraph G { 
- rankdir = Lista; 
    node [shape = rectangle fontname="Arial" fontsize="10"]
    graph [nodesep = 0.4]
    label = < <font color='mediumvioletred'> <font point-size='20'>LISTA DE RUTAS</font></font>>;

@@ -18,11 +18,11 @@ public class Archivos {
     private static String TEMP_DIR = "c:\\temp";
     
     public  void Archivo(String titulo,String text, String fileName){
-        String texto="digraph G { \n rankdir = Lista; \n" +
+        String texto="digraph G { \n"+
                         "   node [shape = rectangle fontname=\"Arial\" fontsize=\"10\"]\n" +
-                        "   graph [nodesep = 0.4]\n" +
+                        "   graph [nodesep = 0.4]\n"+
                         "   label = < <font color='mediumvioletred'> <font point-size='20'>"+ titulo +"</font></font>>;\n" +
-                        "   labelloc = \"t\"; \n" ;           
+                        "   labelloc = \"t\"; \n";      
             texto+=text;
             texto+="   \n}";
         File file = new File(fileName);

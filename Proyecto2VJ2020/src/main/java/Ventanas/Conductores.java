@@ -333,17 +333,18 @@ String anterior;
                     break;
         }
         
-        if(DPI!="" && Nombre!="" && Apellio!="" && Direccion!="" && Telefono!=""){            
+        if((!DPI.equalsIgnoreCase("")) && (!Nombre.equalsIgnoreCase("")) && (!Apellio.equalsIgnoreCase("")) && (!Direccion.equalsIgnoreCase("")) && (!Telefono.equalsIgnoreCase(""))){            
             DE.Insertar(DPI, Telefono, Direccion, TipL, Genero, Nombre, Apellio,nacimiento);
+            jTextField1.setText("");
+            jTextField2.setText("");       
+            jTextField3.setText("");
+            jTextField4.setText("");
+            jTextField5.setText("");
+            jTextField6.setText("");
         }else{
             JOptionPane.showMessageDialog(null, "INGRESE TODOS LOS CAMPOS ", "ERROR", JOptionPane.ERROR_MESSAGE);
         }
-       jTextField1.setText("");
-       jTextField2.setText("");       
-       jTextField3.setText("");
-       jTextField4.setText("");
-       jTextField5.setText("");
-        jTextField6.setText("");
+       
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
