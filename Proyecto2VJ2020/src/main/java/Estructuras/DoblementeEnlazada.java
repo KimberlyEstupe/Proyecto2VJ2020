@@ -1,8 +1,8 @@
 
-package Ventanas;
-
+package Estructuras;
 import kimberlyestupe.proyecto2vj2020.Archivos;
 import javax.swing.JOptionPane;//JOptionPane.showMessageDialog(null, "Aux: "+Cabeza.DPI, "ERROR", JOptionPane.ERROR_MESSAGE);
+
 
 /**
  *
@@ -17,7 +17,7 @@ public class DoblementeEnlazada {
         Cabeza=null;
         nodobuscado=null;
     }
-    
+    //============================= Insertar ========================================================
     public void Insertar(String dpi, String tel, String direc, String tiL, String gen, String name, String lastname, String nacimiento){
         try{
                 long dp=Long.parseLong(dpi);        
@@ -57,6 +57,7 @@ public class DoblementeEnlazada {
         }catch(Exception e){}
     }
     
+    // ==================================== ELIMINAR ===========================================
     public void Eliminar(String dato){
         try{
                 if(Cabeza!=null){
@@ -78,27 +79,34 @@ public class DoblementeEnlazada {
         }catch(Exception e){}
     }
     
+    //============================== MODIFICAR =============================================
     public void Modificar(String anterior, String dato, String tel, String direc, String tiL, String gen, String name, String lastname, String nacimiento){
        try{
             if(Cabeza!=null){
                 NodoDE Nbuscado=Buscar(Long.parseLong(anterior));
-                if(Nbuscado!=null){
-                    long dp=Long.parseLong(dato);   
-                    Nbuscado.DPI=dp;
-                    Nbuscado.nombre=name;
-                    Nbuscado.apellido=lastname;
-                    Nbuscado.Nacimiento=nacimiento;
-                    Nbuscado.telefono=tel;
-                    Nbuscado.direccion=direc;
-                    Nbuscado.genero=gen;
-                    JOptionPane.showMessageDialog(null, "DATOS ACTUALIZADOS: \n DPI: "+Nbuscado.DPI+"\n Nombre: "+Nbuscado.nombre+" \n Apelliod: "+Nbuscado.apellido+"\n Genero: "+Nbuscado.genero+"\n Telefono: "+Nbuscado.telefono+"\n Tipo de Licencia: "+Nbuscado.tipoL+"\n Fecha de nacimiento: "+Nbuscado.Nacimiento);
+                if(anterior.equalsIgnoreCase(dato)){
+                    if(Nbuscado!=null){
+                        long dp=Long.parseLong(dato);  
+                        Nbuscado.nombre=name;
+                        Nbuscado.apellido=lastname;
+                        Nbuscado.Nacimiento=nacimiento;
+                        Nbuscado.telefono=tel;
+                        Nbuscado.direccion=direc;
+                        Nbuscado.genero=gen;
+                        JOptionPane.showMessageDialog(null, "DATOS ACTUALIZADOS: \n DPI: "+Nbuscado.DPI+"\n Nombre: "+Nbuscado.nombre+" \n Apelliod: "+Nbuscado.apellido+"\n Genero: "+Nbuscado.genero+"\n Telefono: "+Nbuscado.telefono+"\n Tipo de Licencia: "+Nbuscado.tipoL+"\n Fecha de nacimiento: "+Nbuscado.Nacimiento);
+                    }
+                }else{
+                    Eliminar(anterior);
+                    Insertar(dato, tel, direc, tiL, gen, name, lastname, nacimiento);
                 }
+                
             }else{
                 JOptionPane.showMessageDialog(null, "No hay datos ingresados");
             }
         }catch(Exception e){}
     }
     
+    //============================== MOSTRAR INFORMACION DE UN DATO  =============================================
     public String MostrarInfo(String dato){
         try{
                 if(Cabeza!=null){
@@ -151,6 +159,7 @@ public class DoblementeEnlazada {
         return -1;
     }
     
+    //============================== BUSCAR =============================================
     public NodoDE Buscar(long buscar){
         try{
             if(Cabeza!=null){
@@ -164,6 +173,7 @@ public class DoblementeEnlazada {
         return null;
     }
     
+    //============================== CARGA MASISIVA DE DATOS  =============================================
     public void CargMasiva(String filaname){
         try{
             String leer[]= archivos.leerArchivo(filaname);  
@@ -179,6 +189,7 @@ public class DoblementeEnlazada {
         }catch(Exception e){}
     }
     
+    //============================== REPORTE =============================================
     public void ReporteListaD(){
         try{
             if(Cabeza!=null){            

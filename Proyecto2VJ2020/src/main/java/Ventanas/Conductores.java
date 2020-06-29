@@ -1,7 +1,8 @@
 package Ventanas;
 import java.awt.Color;
 import javax.swing.JOptionPane;//JOptionPane.showMessageDialog(null, "Aux: "+Cabeza.DPI, "ERROR", JOptionPane.ERROR_MESSAGE);
-/**
+import Estructuras.DoblementeEnlazada;
+/*
  *
  * @author KimberlyEstupe
  */

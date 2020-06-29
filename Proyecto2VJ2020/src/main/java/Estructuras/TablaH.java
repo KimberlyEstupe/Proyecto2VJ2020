@@ -1,12 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package kimberlyestupe.proyecto2vj2020;
+package Estructuras;
 import javax.swing.JOptionPane;
 import kimberlyestupe.proyecto2vj2020.Archivos;
-//https://www.youtube.com/watch?v=1_TVkiVaFgM&t=236s
 /**
  *
  * @author KimberlyEstupe
@@ -282,5 +276,5 @@ public class TablaH {
             Nacimiento = nacimiento;
             anterior = null;
         }
-    }    
+    }
 }

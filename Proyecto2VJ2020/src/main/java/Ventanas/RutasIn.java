@@ -3,7 +3,7 @@ package Ventanas;
 
 import java.awt.Color;
 import javax.swing.JOptionPane;
-import kimberlyestupe.proyecto2vj2020.ListaAdyacencia;
+import Estructuras.ListaAdyacencia;
 /**
  *
  * @author KimberlyEstupe

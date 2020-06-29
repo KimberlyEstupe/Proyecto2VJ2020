@@ -36,18 +36,18 @@ digraph G {
     <f> 27|
     <f4784236987422> DPI: 4784236987422 \n Nombre:Ruby Hall \n Fecha de Nacimiento:22/05/1874 \n Genero:Femenino, Telefono:33258874 \n Dirección:Ciudad de Guatemala|
     <f> 29|
-    <f6581874004378> DPI: 6581874004378 \n Nombre:Luis Samayoa \n Fecha de Nacimiento:36395 \n Genero:Masculino, Telefono:39700154 \n Dirección:Ciudad de Guatemala|
+    <f6581874004378> DPI: 6581874004378 \n Nombre:Luis Samayoa \n Fecha de Nacimiento: 15/04/1996 \n Genero:Masculino, Telefono:39700154 \n Dirección:Ciudad de Guatemala|
     <f> 31|
     <f> 32|
     <f125469874563> DPI: 125469874563 \n Nombre: Jose Carlos  Lopez Morales \n Fecha de Nacimiento: 17/08/1982 \n Genero: Masculino, Telefono:12547896 \n Dirección: 17-01 Z.6 Ciudad deGuatemala|
     <f> 34|
     <f2003588749654> DPI: 2003588749654 \n Nombre:Laura Caruso \n Fecha de Nacimiento:22/01/1874 \n Genero:Femenino, Telefono:98088745 \n Dirección:Ciudad de Guatemala|
     <f6581997874020> DPI: 6581997874020 \n Nombre:Francisco Park \n Fecha de Nacimiento:35650 \n Genero:Masculino, Telefono:22557746 \n Dirección:Ciudad de Guatemala|
-    <f> 37|
-    <f7798742547016> DPI: 7798742547016 \n Nombre:Pedro Antonio Malavath \n Fecha de Nacimiento:11763 \n Genero:Masculino, Telefono:25877463 \n Dirección:Ciudad de Guatemala|
+    <f7798742547015> DPI: 7798742547015 \n Nombre:Tony Malavath \n Fecha de Nacimiento:11/06/1993 \n Genero:Masculino, Telefono:25877463 \n Dirección:Ciudad de Guatemala|
+    <f> 38|
     <f> 39|
     <f> 40|
-    <f7798742547019> DPI: 7798742547019 \n Nombre:Tania Sofia Romanof Coradez \n Fecha de Nacimiento:14/03/1879 \n Genero:Femenino, Telefono:55697124 \n Dirección:Ciudad de Guatemala|
+    <f7798742547019> DPI: 7798742547019 \n Nombre:Tania Romanof \n Fecha de Nacimiento:14/03/1879 \n Genero:Femenino, Telefono:50697004 \n Dirección:Ciudad de Guatemala|
     <f> 42|
     <f> 43|
     <f225460577114> DPI: 225460577114 \n Nombre: Karmen Elizabeth  Fernandez Urbina \n Fecha de Nacimiento:22/04/1940 \n Genero: Masculino, Telefono:95478032 \n Dirección: 6ta calle Ciudad de Guatemala|
@@ -59,7 +59,7 @@ digraph G {
     <f1259863547896> DPI: 1259863547896 \n Nombre:Lesly Thuth \n Fecha de Nacimiento:24/04/1874 \n Genero:Femenino, Telefono:20587001 \n Dirección:Ciudad de Guatemala|
     <f> 51|
     <f> 52|
-    <f5478123069747> DPI: 5478123069747 \n Nombre:Imelda Grey \n Fecha de Nacimiento:35578 \n Genero:Femenino, Telefono:97458821 \n Dirección:Ciudad de Guatemala|
+    <f5478123069747> DPI: 5478123069747 \n Nombre:Imelda Grey \n Fecha de Nacimiento: 11/10/1972 \n Genero:Femenino, Telefono:97458821 \n Dirección:Ciudad de Guatemala|
     <f4501028255746> DPI: 4501028255746 \n Nombre:Daniela Liu \n Fecha de Nacimiento:32127 \n Genero:Femenino, Telefono:22546632 \n Dirección:Ciudad de Guatemala|
     <f358450025665> DPI: 358450025665 \n Nombre: Ana Gabriera  Perez Corado \n Fecha de Nacimiento: 09/05/1822 \n Genero: Femenino, Telefono:12365478 \n Dirección: 5av calle emperador Ciudad de Guatemala|
     <f1369874826502> DPI: 1369874826502 \n Nombre: Cassian  Del Valle \n Fecha de Nacimiento: 17/08/1982 \n Genero: Masculino, Telefono:12547896 \n Dirección: Ciudad de Guatemala|
@@ -73,11 +73,11 @@ digraph G {
     <f222469887114> DPI: 222469887114 \n Nombre: Maria del Rosario  Juarez Mendoza \n Fecha de Nacimiento: 22/04/1940 \n Genero: Femenino, Telefono:95478032 \n Dirección: 7ta calle Ciudad de Guatemala|
     <f> 65|
     <f> 66|
-    <f8123069757479> DPI: 8123069757479 \n Nombre:Norberto Gonzales \n Fecha de Nacimiento:35593 \n Genero:Masculino, Telefono:44556699 \n Dirección:Ciudad de Guatemala|
+    <f8123069757479> DPI: 8123069757479 \n Nombre:Norberto Gonzales \n Fecha de Nacimiento:25/01/1983 \n Genero:Masculino, Telefono:44556699 \n Dirección:Ciudad de Guatemala|
     <f3697448002546> DPI: 3697448002546 \n Nombre:Igancio Russo \n Fecha de Nacimiento:32045 \n Genero:Masculino, Telefono:22897461 \n Dirección:Ciudad de Guatemala|
     <f5547800125479> DPI: 5547800125479 \n Nombre:Armando Mair \n Fecha de Nacimiento:01/03/1744 \n Genero:Masculino, Telefono:39895025 \n Dirección:Ciudad de Guatemala|
     <f> 70|
-    <f3258746900125> DPI: 3258746900125 \n Nombre:Angela Maria Solares Dupon \n Fecha de Nacimiento:22/07/1998 \n Genero:Femenino, Telefono:22478001 \n Dirección:Ciudad Capital|
+    <f> 71|
     <f> 72|
     <f> 73   ", height=2.5]; 
     node [shape=component] 
@@ -86,16 +86,16 @@ digraph G {
     N295469887188    [label= " DPI: 295469887188 \n Nombre: Sofia  Mejia Obrado \n Fecha de Nacimiento: 09/05/1822 \n Genero: Femenino, Telefono:12365478 \n Dirección: 5av calle emperador Ciudad de Guatemala" ] 
 
     N0:f9996587463250 -> N7798742547026 
-    N7798742547026    [label= " DPI: 7798742547026 \n Nombre:Sara Estrada \n Fecha de Nacimiento:37006 \n Genero:Femenino, Telefono:88745523 \n Dirección:Ciudad de Guatemala" ] 
+    N7798742547026    [label= " DPI: 7798742547026 \n Nombre:Sara Estrada \n Fecha de Nacimiento:28/02/1998 \n Genero:Femenino, Telefono:88745523 \n Dirección:Ciudad de Guatemala" ] 
 
     N0:f358450025665 -> N5478123069749 
-    N5478123069749    [label= " DPI: 5478123069749 \n Nombre:Maria Jose Vladimir \n Fecha de Nacimiento:35511 \n Genero:Femenino, Telefono:96300144 \n Dirección:Ciudad de Guatemala" ] 
+    N5478123069749    [label= " DPI: 5478123069749 \n Nombre:Maria Jose Vladimir \n Fecha de Nacimiento:19/08/2005 \n Genero:Femenino, Telefono:96300144 \n Dirección:Ciudad de Guatemala" ] 
 
     N0:f295469887151 -> N295469887225 
     N295469887225    [label= " DPI: 295469887225 \n Nombre: Marcos  Theradam \n Fecha de Nacimiento: 09/05/1822 \n Genero: Masculino, Telefono:12365478 \n Dirección: 5av calle emperador Ciudad de Guatemala" ] 
 
     N0:f8123069757479 -> N6547520398779 
-    N6547520398779    [label= " DPI: 6547520398779 \n Nombre:Rudy Rodriguez \n Fecha de Nacimiento:35633 \n Genero:Masculino, Telefono:20563461 \n Dirección:Ciudad de Guatemala" ] 
+    N6547520398779    [label= " DPI: 6547520398779 \n Nombre:Rudy Rodriguez \n Fecha de Nacimiento:22/02/1982 \n Genero:Masculino, Telefono:20563461 \n Dirección:Ciudad de Guatemala" ] 
     N6547520398779 -> N4225415490191 
     N4225415490191    [label= " DPI: 4225415490191 \n Nombre:Federico Esposito \n Fecha de Nacimiento:36110 \n Genero:Masculino, Telefono:33956475 \n Dirección:Ciudad de Guatemala" ] 
    

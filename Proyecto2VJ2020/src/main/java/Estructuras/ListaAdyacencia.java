@@ -1,6 +1,7 @@
-package kimberlyestupe.proyecto2vj2020;
+package Estructuras;
 import javax.swing.JOptionPane;//JOptionPane.showMessageDialog(null, "Aux: "+Cabeza.DPI, "ERROR", JOptionPane.ERROR_MESSAGE);
 import kimberlyestupe.proyecto2vj2020.Archivos;
+
 /**
  *
  * @author KimberlyEstupe
@@ -13,6 +14,7 @@ public class ListaAdyacencia {
         Inicio=null;
     }
     
+    //============================== CARGA MASIVA DE DATOS =============================================
     public void CargMasivaA(String filaname){
         String leer[]= archivos.leerArchivo(filaname);  
         String juntos;
@@ -26,6 +28,7 @@ public class ListaAdyacencia {
         
     }
     
+    //============================== INGRESA =============================================
     public void Ingesar(String origen, String Destino, String tiempo){
         NodoLA norigen=Origen(origen);
         NodoLA NEW=new NodoLA(origen,Destino,tiempo,norigen.cabecera,0);
@@ -68,7 +71,8 @@ public class ListaAdyacencia {
             nuevo.Anterior=Norigen;
         }
     }
-      
+    
+    //============================== REPORTE DE LISTA =============================================
     public void RListaAd(){        
         if(Inicio!=null){
             String text=RecorridoLista();
