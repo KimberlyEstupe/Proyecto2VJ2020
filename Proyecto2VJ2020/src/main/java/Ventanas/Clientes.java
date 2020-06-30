@@ -1,6 +1,9 @@
 package Ventanas;
+import Estructuras.BlochChain;
 import java.awt.Color;
 import javax.swing.JOptionPane;//JOptionPane.showMessageDialog(null, "Aux: "+Cabeza.DPI, "ERROR", JOptionPane.ERROR_MESSAGE);
+import Estructuras.DoblementeEnlazada;
+import Estructuras.ListaAdyacencia;
 import Estructuras.TablaH;
 
 /**
@@ -8,12 +11,20 @@ import Estructuras.TablaH;
  * @author KimberlyEstupe
  */
 public class Clientes extends javax.swing.JFrame {
-TablaH TH = new TablaH();
+ListaAdyacencia LA;
+DoblementeEnlazada DE;
+TablaH TH;
+BlochChain BC;
+
 String busqueda;
     /**
      * Creates new form Clientes
      */
-    public Clientes() {
+    public Clientes(DoblementeEnlazada de, TablaH th ,ListaAdyacencia la, BlochChain bc) {
+        LA = la;
+        DE = de;
+        TH = th;
+        BC = bc;
         initComponents();
         this.getContentPane().setBackground(Color.PINK);
         this.setLocationRelativeTo(null);
@@ -46,6 +57,7 @@ String busqueda;
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -208,6 +220,14 @@ String busqueda;
             }
         });
 
+        jButton8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton8.setText("Menu");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -233,7 +253,11 @@ String busqueda;
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton4)))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jButton8))
+                                    .addComponent(jButton4))))))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -256,8 +280,10 @@ String busqueda;
                         .addComponent(jButton6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                        .addComponent(jButton4)))
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                        .addComponent(jButton8)))
                 .addGap(18, 18, 18)
                 .addComponent(jButton3)
                 .addGap(33, 33, 33))
@@ -366,6 +392,12 @@ String busqueda;
         }
     }//GEN-LAST:event_jButton6ActionPerformed
 
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        this. setVisible(false);
+       RutasIn RI= new RutasIn(DE, TH, LA, BC);
+       RI.setVisible(true);
+    }//GEN-LAST:event_jButton8ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -409,6 +441,7 @@ String busqueda;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

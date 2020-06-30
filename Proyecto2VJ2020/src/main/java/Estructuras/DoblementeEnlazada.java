@@ -10,6 +10,7 @@ import javax.swing.JOptionPane;//JOptionPane.showMessageDialog(null, "Aux: "+Cab
  */
 public class DoblementeEnlazada {
     Archivos archivos=new Archivos();
+    
     NodoDE Cabeza;
     NodoDE nodobuscado;
     
@@ -173,6 +174,22 @@ public class DoblementeEnlazada {
         return null;
     }
     
+    public String MonstrarConductore(){
+        try{            
+            if(Cabeza!=null){
+                String texto="<html><body>";
+                NodoDE aux=Cabeza;
+                do{
+                    texto+=aux.DPI+"<br>";
+                    aux=aux.Sig;
+                }while (aux!=Cabeza);
+                texto+="</body></html>";
+                return texto;
+            }
+        }catch(Exception e){}
+        return "";
+    }
+    
     //============================== CARGA MASISIVA DE DATOS  =============================================
     public void CargMasiva(String filaname){
         try{
@@ -222,18 +239,19 @@ public class DoblementeEnlazada {
         return "";
     }
     
-    private class NodoDE{
-        public NodoDE Sig;
-        public NodoDE Ante;
-        public long DPI;
-        public String telefono;
-        public String tipoL;
-        public String genero;
-        public String direccion;
-        public String nombre;
-        public String apellido;  
-        public String Nacimiento;
-        public NodoDE(long dpi, String tel, String direc, String tiL, String gen, String name, String lastname, String nacimiento){
+    public class NodoDE{
+        NodoDE Sig;
+        NodoDE Ante;
+        long DPI;
+        String telefono;
+        String tipoL;
+        String genero;
+        String direccion;
+        String nombre;
+        String apellido;  
+        String Nacimiento;
+        
+        private NodoDE(long dpi, String tel, String direc, String tiL, String gen, String name, String lastname, String nacimiento){
             Sig = null;
             Ante = null;
             tipoL = tiL;

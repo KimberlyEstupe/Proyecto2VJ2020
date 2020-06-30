@@ -3,14 +3,25 @@ package Ventanas;
 
 import java.awt.Color;
 import javax.swing.JOptionPane;
+import Estructuras.DoblementeEnlazada;
 import Estructuras.ListaAdyacencia;
+import Estructuras.TablaH;
+import Estructuras.BlochChain;
 /**
  *
  * @author KimberlyEstupe
  */
 public class RutasIn extends javax.swing.JFrame {
-    ListaAdyacencia LA = new ListaAdyacencia();
-    public RutasIn() {
+    ListaAdyacencia LA;
+    DoblementeEnlazada DE;
+    TablaH TH;
+    BlochChain BC;
+    
+    public RutasIn(DoblementeEnlazada de, TablaH th ,ListaAdyacencia la, BlochChain bc) {
+        LA = la;
+        DE = de;
+        TH = th;
+        BC = bc;
         initComponents();
         this.getContentPane().setBackground(Color.PINK);
         this.setLocationRelativeTo(null);
@@ -49,6 +60,7 @@ public class RutasIn extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         jButton2.setText("Ver Mapas de Ruta");
+        jButton2.setEnabled(false);
 
         jButton3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         jButton3.setText("Ver Listas de Ruta");
@@ -68,15 +80,27 @@ public class RutasIn extends javax.swing.JFrame {
 
         jButton6.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         jButton6.setText("Ingresar Clientes");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jButton7.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         jButton7.setText("Ingresar Vehiculos");
+        jButton7.setEnabled(false);
 
         jButton8.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         jButton8.setText("Ingresar Viajes");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jButton9.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         jButton9.setText("TOP'S");
+        jButton9.setEnabled(false);
 
         jButton10.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         jButton10.setText("Salir");
@@ -157,12 +181,25 @@ public class RutasIn extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-            //
+        this.setVisible(false);
+        Conductores con = new Conductores(DE, TH, LA,BC);
+        con.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         LA.RListaAd();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        Clientes cliente = new Clientes(DE, TH, LA, BC);
+        cliente.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        Viajes Vi = new Viajes(DE, TH, LA, BC);
+        Vi.setVisible(true);
+    }//GEN-LAST:event_jButton8ActionPerformed
 
     
 //    public static void main(String args[]) {

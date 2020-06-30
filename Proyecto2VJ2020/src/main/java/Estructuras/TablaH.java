@@ -193,7 +193,27 @@ public class TablaH {
             JOptionPane.showMessageDialog(null, "Dato modificado");
         }catch(Exception e){            
         }
-    }        
+    } 
+    
+    public String MostrarClientes(){        
+        try{
+            NodoTH aux;
+            String texto="<html><body>";
+            for(int i=0; i< Tam; i++){
+                aux=vectorH[i];
+                if(aux!=null){
+                    do{
+                        texto+=aux.DPI+" <br>";
+                        aux=aux.siguiente;
+                    }while(aux!=null);
+                }
+            }
+            texto+="</body></html>";
+            return texto;
+        }catch(Exception e){}
+        
+        return "";
+    }
     //============================= REPORTE ==========================================
     public void ReporteTabla(){
         String text="   rankdir=LR; \n   node [shape=record,width=.1,height=.1]; \n";
@@ -253,7 +273,7 @@ public class TablaH {
     }
     
     
-    private class NodoTH{
+    public class NodoTH{
         NodoTH siguiente;
         NodoTH anterior;
         long DPI;
@@ -264,7 +284,7 @@ public class TablaH {
         String Direccion;
         String Nacimiento;
         int estado;
-        NodoTH(long dpi, String nombre,String Ape, String gen, String nacimiento, String Tel, String dir){
+        public NodoTH(long dpi, String nombre,String Ape, String gen, String nacimiento, String Tel, String dir){
             siguiente = null;
             DPI = dpi;
             Nombre = nombre;

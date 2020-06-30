@@ -139,7 +139,7 @@ public class ListaAdyacencia {
     }
     
     
-    private class NodoLA{
+    public class NodoLA{
         NodoLA Abajo;
         NodoLA Siguiente;
         NodoLA Anterior;
@@ -150,7 +150,7 @@ public class ListaAdyacencia {
         int cabecera;
         int lista;
         //int grafo;
-        NodoLA(String Origen, String Destino, String tiempo, int cabeza, int lis){
+        public NodoLA(String Origen, String Destino, String tiempo, int cabeza, int lis){
             Abajo=null;
             Siguiente =null;
             Anterior=null;
