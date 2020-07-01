@@ -17,6 +17,7 @@ public class Menu {
         ListaAdyacencia LA = new ListaAdyacencia();
         TablaH TH = new TablaH();
         BlochChain BC = new BlochChain();
+        
         RutasIn RI= new RutasIn(DE, TH, LA, BC);
         RI.setVisible(true);
         

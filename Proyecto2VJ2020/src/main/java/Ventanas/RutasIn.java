@@ -100,7 +100,11 @@ public class RutasIn extends javax.swing.JFrame {
 
         jButton9.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         jButton9.setText("TOP'S");
-        jButton9.setEnabled(false);
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
 
         jButton10.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         jButton10.setText("Salir");
@@ -201,6 +205,12 @@ public class RutasIn extends javax.swing.JFrame {
         Vi.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        VTOPS vt = new VTOPS(DE, TH, LA, BC);
+        vt.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton9ActionPerformed
 
     
 //    public static void main(String args[]) {

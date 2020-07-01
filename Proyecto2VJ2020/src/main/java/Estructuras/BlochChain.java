@@ -106,24 +106,7 @@ public class BlochChain {
     public void ReporteBC(){
         try{
             if(Cabeza!=null){            
-                String texto=" rankdir = Lista; \n   {rank=same \n";
-            if(Cabeza!=null){
-                NodoBC aux=Cabeza;  
-                do{   
-                        texto+="      NBC"+aux.Clave+" [label= \" Clave: "+aux.Clave+
-                                "\\n Cliente: "+aux.nodoDE.DPI+", "+aux.nodoDE.nombre+
-                                "\\n Conductor: "+aux.nodoTH.DPI+", "+aux.nodoTH.Nombre+
-                                "\\n Origen: "+aux.Origen+
-                                "\\n Destino: "+aux.Destino+
-                                "\\n Fecha: "+aux.Fecha+
-                                "\\n Hora: "+aux.Hora+"\" ] \n";
-                        if(aux.siguiente!=null)  texto+="      NBC"+aux.Clave+" -> NBC"+aux.siguiente.Clave+" [color=blue3][dir=both]\n";
-                        aux=aux.siguiente;                    
-                }while(aux!=null);
-                    texto+="   }\n";
-                
-            }
-                
+                String texto=RecorridoBC();                            
                 archivos.Archivo("Reporte de Viajes",texto, "ReporteBlockChain.txt");
             }else{
                 JOptionPane.showMessageDialog(null, "ERROR \n No hay datos ingresado ", "ERROR", JOptionPane.ERROR_MESSAGE);
@@ -138,8 +121,8 @@ public class BlochChain {
                 NodoBC aux=Cabeza;  
                 do{   
                         texto+="      NBC"+aux.Clave+" [label= \" Clave: "+aux.Clave+
-                                "\\n Cliente: "+aux.nodoDE.DPI+", "+aux.nodoDE.nombre+
-                                "\\n Conductor: "+aux.nodoTH.DPI+", "+aux.nodoTH.Nombre+
+                                "\\n Conductor: "+aux.nodoDE.DPI+", "+aux.nodoDE.nombre+
+                                "\\n Cliente: "+aux.nodoTH.DPI+", "+aux.nodoTH.Nombre+
                                 "\\n Origen: "+aux.Origen+
                                 "\\n Destino: "+aux.Destino+
                                 "\\n Fecha: "+aux.Fecha+

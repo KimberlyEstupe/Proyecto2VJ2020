@@ -25,7 +25,13 @@ public class TablaH {
         this.PorcenOcupacion=PorcentajeUtil();
     }
     
+    public NodoTH[] getTabla(){
+        return vectorH;
+    }
     
+    public int getTam(){
+        return Tam;
+    }
     
     private float PorcentajeUtil(){
         return (Ocupados*100)/Tam;
@@ -226,7 +232,7 @@ public class TablaH {
                 String texto = " rankdir=LR; \n   node [shape=record,width=.1,height=.1]; \n   N0 [label = \" \n";
                 //Creando tabla
                 for(int i=0; i<Tam; i++){
-                    texto+="    <f"+i+"> \\n \\n \\n \\n "+i+" \\n \\n \\n \\n";
+                    texto+="    <f"+i+"> \\n \\n \\n "+i+" \\n \\n \\n \\n";
                     if(i!=Tam-1) texto+="|\n";
                 }
 

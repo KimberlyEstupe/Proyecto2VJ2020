@@ -11,12 +11,16 @@ import javax.swing.JOptionPane;//JOptionPane.showMessageDialog(null, "Aux: "+Cab
 public class DoblementeEnlazada {
     Archivos archivos=new Archivos();
     
-    NodoDE Cabeza;
-    NodoDE nodobuscado;
+    private NodoDE Cabeza;
+    private NodoDE nodobuscado;
     
     public DoblementeEnlazada(){
         Cabeza=null;
         nodobuscado=null;
+    }
+    
+    public NodoDE getCabeza(){
+        return Cabeza;
     }
     //============================= Insertar ========================================================
     public void Insertar(String dpi, String tel, String direc, String tiL, String gen, String name, String lastname, String nacimiento){
@@ -225,7 +229,13 @@ public class DoblementeEnlazada {
             if(Cabeza!=null){
                 NodoDE aux=Cabeza;          
                     do{   
-                        texto+="      NDE"+aux.DPI+" [label= \"DPI: "+aux.DPI+"\n         Nombre: "+aux.nombre+" \n         Apelliod: "+aux.apellido+"\n         Genero: "+aux.genero+"\n         Telefono: "+aux.telefono+"\n         Tipo de Licencia: "+aux.tipoL+"\n         Direccion: "+aux.direccion+"\" ] \n";
+                        texto+="      NDE"+aux.DPI+" [label= \"DPI: "+aux.DPI+
+                                    "\\n         Nombre: "+aux.nombre+
+                                    " \\n         Apelliod: "+aux.apellido+
+                                    "\\n         Genero: "+aux.genero+
+                                    "\\n         Telefono: "+aux.telefono+
+                                    "\\n         Tipo de Licencia: "+aux.tipoL+
+                                    "\\n         Direccion: "+aux.direccion+"\" ] \n";
                         texto+="      NDE"+aux.DPI+" -> NDE"+aux.Sig.DPI+" [color=blue3][dir=both]\n";
                         aux=aux.Sig;                    
                     }while(aux!=Cabeza);
