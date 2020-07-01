@@ -1,0 +1,13 @@
+digraph G { 
+   node [shape = rectangle fontname="Arial" fontsize="10"]
+   graph [nodesep = 0.4]
+   label = < <font color='mediumvioletred'> <font point-size='20'>Reporte de Viajes</font></font>>;
+   labelloc = "t"; 
+ rankdir = Lista; 
+   {rank=same 
+      NBC83c3d853a72aeafa1b17b5a0940652ba [label= " Clave: 83c3d853a72aeafa1b17b5a0940652ba\n Cliente: 1234567890123, Marisela\n Conductor: 9874563210123,  Maria del Rosario\n Origen: Peten\n Destino: Guatemala\n Fecha: 362020\n Hora: 21:52:38" ] 
+      NBC83c3d853a72aeafa1b17b5a0940652ba -> NBCde7266432cb3f75c190653bdb18f62b5 [color=blue3][dir=both]
+      NBCde7266432cb3f75c190653bdb18f62b5 [label= " Clave: de7266432cb3f75c190653bdb18f62b5\n Cliente: 3214569879632, Antonio\n Conductor: 1254698745633,  Jose Carlos\n Origen: Guatemala\n Destino: Peten\n Fecha: 362020\n Hora: 21:53:58" ] 
+   }
+   
+}

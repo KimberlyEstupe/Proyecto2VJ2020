@@ -1,8 +1,71 @@
 digraph G { 
    node [shape = rectangle fontname="Arial" fontsize="10"]
    graph [nodesep = 0.4]
-   label = < <font color='mediumvioletred'> <font point-size='20'>Reporte de Clientes</font></font>>;
+   label = < <font color='mediumvioletred'> <font point-size='20'>ESTRUCTURAS</font></font>>;
    labelloc = "t"; 
+ rankdir = Lista; 
+   node [shape=tab] 
+   {rank=same 
+      NDE1234567890123 [label= "DPI: 1234567890123
+         Nombre: Marisela 
+         Apelliod: Arrebalo
+         Genero: Femenino
+         Telefono: 987456
+         Tipo de Licencia: A
+         Direccion: GUATEMLA" ] 
+      NDE1234567890123 -> NDE1478520369874 [color=blue3][dir=both]
+      NDE1478520369874 [label= "DPI: 1478520369874
+         Nombre: Marisol 
+         Apelliod: De Leon
+         Genero: Femenino
+         Telefono: 3225
+         Tipo de Licencia: B
+         Direccion: Alemania" ] 
+      NDE1478520369874 -> NDE3214569879632 [color=blue3][dir=both]
+      NDE3214569879632 [label= "DPI: 3214569879632
+         Nombre: Antonio 
+         Apelliod: Del Valle
+         Genero: Masculino
+         Telefono: 99874
+         Tipo de Licencia: A
+         Direccion: Brasil" ] 
+      NDE3214569879632 -> NDE5874693215635 [color=blue3][dir=both]
+      NDE5874693215635 [label= "DPI: 5874693215635
+         Nombre: Luis Esteban 
+         Apelliod: SEDR
+         Genero: Masculino
+         Telefono: 87458
+         Tipo de Licencia: B
+         Direccion: Jalapa" ] 
+      NDE5874693215635 -> NDE7463028256641 [color=blue3][dir=both]
+      NDE7463028256641 [label= "DPI: 7463028256641
+         Nombre: Marcos Javier 
+         Apelliod: Cabrera
+         Genero: Masculino
+         Telefono: 98745
+         Tipo de Licencia: C
+         Direccion: Nicaragua" ] 
+      NDE7463028256641 -> NDE8521478963001 [color=blue3][dir=both]
+      NDE8521478963001 [label= "DPI: 8521478963001
+         Nombre: Sofia Elizabeth 
+         Apelliod: JJHO
+         Genero: Femenino
+         Telefono: 20555
+         Tipo de Licencia: C
+         Direccion: Guadalajara" ] 
+      NDE8521478963001 -> NDE1234567890123 [color=blue3][dir=both]
+   }
+
+ 
+ rankdir = Lista; 
+   node [shape=note]
+   {rank=same 
+      NBC56a001831792f1ff88579b6239f2235d [label= " Clave: 56a001831792f1ff88579b6239f2235d\n Cliente: 1234567890123, Marisela\n Conductor: 1234567891234,  Maria del Carmen\n Origen: Peten\n Destino: Guatemala\n Fecha: 30/6/2020\n Hora: 23:29:5" ] 
+      NBC56a001831792f1ff88579b6239f2235d -> NBC4141974dce4cc8b083c3a54651f8c605 [color=darkorchid4][dir=both]
+      NBC4141974dce4cc8b083c3a54651f8c605 [label= " Clave: 4141974dce4cc8b083c3a54651f8c605\n Cliente: 1478520369874, Marisol\n Conductor: 3050714054627, Damira\n Origen: Jalapa\n Destino: Jutiapa\n Fecha: 30/6/2020\n Hora: 23:30:5" ] 
+   }
+
+ 
  rankdir=LR; 
    node [shape=record,width=.1,height=.1]; 
    N0 [label = " 
@@ -170,5 +233,13 @@ digraph G {
    
   N0:f35 -> NTH2003588749654 
     NTH2003588749654    [label= " DPI: 2003588749654 \n Nombre:Laura Caruso \n Fecha de Nacimiento:22/01/1874 \n Genero:Femenino, Telefono:98088745 \n Dirección:Ciudad de Guatemala" ] 
+
+ 
+
+NBC56a001831792f1ff88579b6239f2235d -> NDE1234567890123 [color=deeppink3][dir=both]
+NBC56a001831792f1ff88579b6239f2235d -> NTH1234567891234 [color=darkgreen][dir=both]
+NBC4141974dce4cc8b083c3a54651f8c605 -> NDE1478520369874 [color=deeppink3][dir=both]
+NBC4141974dce4cc8b083c3a54651f8c605 -> NTH3050714054627 [color=darkgreen][dir=both]
+  
    
 }

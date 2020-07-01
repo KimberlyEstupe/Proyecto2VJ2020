@@ -203,6 +203,7 @@ public class DoblementeEnlazada {
                         String dir = divicion[7].substring(0, divicion[7].length() - 1);
                         Insertar(divicion[0], divicion[6], dir, divicion[3], divicion[4], divicion[1], divicion[2], divicion[5]);            
             }
+            JOptionPane.showMessageDialog(null, "Todos los datod fueron ingresados correctamente"); 
         }catch(Exception e){}
     }
     
@@ -210,9 +211,8 @@ public class DoblementeEnlazada {
     public void ReporteListaD(){
         try{
             if(Cabeza!=null){            
-                String text=" rankdir = Lista; \n";
-                text+=GenerarLista();
-                archivos.Archivo("Doblemente Enlazada",text, "ReporteLitsa.txt");
+                String text=GenerarLista();
+                archivos.Archivo("Reporte de Conductores ",text, "ReporteLitsa.txt");
             }else{
                 JOptionPane.showMessageDialog(null, "ERROR \n No hay datos ingresado ", "ERROR", JOptionPane.ERROR_MESSAGE);
             }
@@ -221,7 +221,7 @@ public class DoblementeEnlazada {
     
     public String GenerarLista(){
         try{
-            String texto="   {rank=same \n";
+            String texto=" rankdir = Lista; \n   node [shape=tab] \n   {rank=same \n";
             if(Cabeza!=null){
                 NodoDE aux=Cabeza;          
                     do{   
@@ -250,6 +250,7 @@ public class DoblementeEnlazada {
         String nombre;
         String apellido;  
         String Nacimiento;
+        int viajes;
         
         private NodoDE(long dpi, String tel, String direc, String tiL, String gen, String name, String lastname, String nacimiento){
             Sig = null;
@@ -262,6 +263,7 @@ public class DoblementeEnlazada {
             nombre=name;
             apellido=lastname;
             Nacimiento = nacimiento;
+            viajes=0;
         }
     }   
 }

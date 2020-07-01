@@ -1,36 +1,37 @@
 digraph G { 
    node [shape = rectangle fontname="Arial" fontsize="10"]
    graph [nodesep = 0.4]
-   label = < <font color='mediumvioletred'> <font point-size='20'>Doblemente Enlazada</font></font>>;
+   label = < <font color='mediumvioletred'> <font point-size='20'>Reporte de Conductores </font></font>>;
    labelloc = "t"; 
  rankdir = Lista; 
+   node [shape=tab] 
    {rank=same 
-      NDE1025654489635 [label= "DPI: 1025654489635
-         Nombre: OJG 
-         Apelliod: FFYS
-         Genero: Femenino
-         Telefono: 3225
-         Tipo de Licencia: B
-         Direccion: Alemania" ] 
-      NDE1025654489635 -> NDE1234567890123 [color=blue3][dir=both]
       NDE1234567890123 [label= "DPI: 1234567890123
-         Nombre: NKI 
-         Apelliod: SUJY
+         Nombre: Marisela 
+         Apelliod: Arrebalo
          Genero: Femenino
          Telefono: 987456
          Tipo de Licencia: A
          Direccion: GUATEMLA" ] 
-      NDE1234567890123 -> NDE2587463256641 [color=blue3][dir=both]
-      NDE2587463256641 [label= "DPI: 2587463256641
-         Nombre: DFG 
-         Apelliod: FHYH
+      NDE1234567890123 -> NDE1478520369874 [color=blue3][dir=both]
+      NDE1478520369874 [label= "DPI: 1478520369874
+         Nombre: Marisol 
+         Apelliod: De Leon
+         Genero: Femenino
+         Telefono: 3225
+         Tipo de Licencia: B
+         Direccion: Alemania" ] 
+      NDE1478520369874 -> NDE3214569879632 [color=blue3][dir=both]
+      NDE3214569879632 [label= "DPI: 3214569879632
+         Nombre: Antonio 
+         Apelliod: Del Valle
          Genero: Masculino
          Telefono: 99874
          Tipo de Licencia: A
          Direccion: Brasil" ] 
-      NDE2587463256641 -> NDE5874693215635 [color=blue3][dir=both]
+      NDE3214569879632 -> NDE5874693215635 [color=blue3][dir=both]
       NDE5874693215635 [label= "DPI: 5874693215635
-         Nombre: DDG 
+         Nombre: Luis Esteban 
          Apelliod: SEDR
          Genero: Masculino
          Telefono: 87458
@@ -38,21 +39,21 @@ digraph G {
          Direccion: Jalapa" ] 
       NDE5874693215635 -> NDE7463028256641 [color=blue3][dir=both]
       NDE7463028256641 [label= "DPI: 7463028256641
-         Nombre: DFG 
-         Apelliod: FHYH
+         Nombre: Marcos Javier 
+         Apelliod: Cabrera
          Genero: Masculino
          Telefono: 98745
          Tipo de Licencia: C
          Direccion: Nicaragua" ] 
-      NDE7463028256641 -> NDE8746932660256 [color=blue3][dir=both]
-      NDE8746932660256 [label= "DPI: 8746932660256
-         Nombre: ERT 
+      NDE7463028256641 -> NDE8521478963001 [color=blue3][dir=both]
+      NDE8521478963001 [label= "DPI: 8521478963001
+         Nombre: Sofia Elizabeth 
          Apelliod: JJHO
          Genero: Femenino
          Telefono: 20555
          Tipo de Licencia: C
          Direccion: Guadalajara" ] 
-      NDE8746932660256 -> NDE1025654489635 [color=blue3][dir=both]
+      NDE8521478963001 -> NDE1234567890123 [color=blue3][dir=both]
    }
    
 }

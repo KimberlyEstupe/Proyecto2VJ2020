@@ -77,7 +77,7 @@ public class TablaH {
     }
     
     public void ReHashing(){
-        try{
+        try{System.out.println("rehashin");
             NodoTH vectorAux[]=vectorH;
             int tamanoAux=Tam;
             if(Indice<PTams.length){
@@ -216,24 +216,17 @@ public class TablaH {
     }
     //============================= REPORTE ==========================================
     public void ReporteTabla(){
-        String text="   rankdir=LR; \n   node [shape=record,width=.1,height=.1]; \n";
-        text+=RecorridoTabla();
-        archivos.Archivo("Clientes del Sistema", text, "TablaHash.txt");
+        String text=RecorridoTabla();
+        archivos.Archivo("Reporte de Clientes", text, "TablaHash.txt");
     }
     
     public String RecorridoTabla(){
         try{
                 NodoTH aux;        
-                String texto = "   N0 [label = \" \n";
+                String texto = " rankdir=LR; \n   node [shape=record,width=.1,height=.1]; \n   N0 [label = \" \n";
                 //Creando tabla
                 for(int i=0; i<Tam; i++){
-                    if(vectorH[i]!=null){ texto+="    <f"+vectorH[i].DPI+"> DPI: "+vectorH[i].DPI+
-                            " \\n Nombre:"+vectorH[i].Nombre+" "+vectorH[i].Apellido+
-                            " \\n Fecha de Nacimiento:"+vectorH[i].Nacimiento+
-                            " \\n Genero:"+vectorH[i].Genero+
-                            ", Telefono:"+vectorH[i].Telefono+
-                            " \\n Dirección:"+vectorH[i].Direccion;}
-                    else texto+="    <f> "+i;
+                    texto+="    <f"+i+"> \\n \\n \\n \\n "+i+" \\n \\n \\n \\n";
                     if(i!=Tam-1) texto+="|\n";
                 }
 
@@ -242,20 +235,19 @@ public class TablaH {
                 //Listas enlazadas 
                 for(int i = 0; i<Tam-1; i++){
                     aux=vectorH[i];
-                    if(aux!=null && aux.siguiente!=null){
-                        texto+="\n    N0:f"+aux.DPI+" -> N"+aux.siguiente.DPI+" \n";
-                        aux=aux.siguiente;
-                        texto+="    N"+aux.DPI+"    [label= \" DPI: "+aux.DPI+
-                                " \\n Nombre:"+aux.Nombre+" "+aux.Apellido+
+                    if(aux!=null){
+                        texto+="\n   \n  N0:f"+i+" -> NTH"+aux.DPI+" \n";                        
+                        texto+="    NTH"+aux.DPI+"    [label= \" DPI: "+aux.DPI+
+                            " \\n Nombre:"+aux.Nombre+" "+aux.Apellido+
                             " \\n Fecha de Nacimiento:"+aux.Nacimiento+
                             " \\n Genero:"+aux.Genero+
                             ", Telefono:"+aux.Telefono+
                             " \\n Dirección:"+aux.Direccion+
                                 "\" ] \n";
                         while(aux.siguiente!=null){
-                            texto+="    N"+aux.DPI+" -> N"+aux.siguiente.DPI+" \n";
+                            texto+="    NTH"+aux.DPI+" -> NTH"+aux.siguiente.DPI+" \n";
                             aux=aux.siguiente;
-                            texto+="    N"+aux.DPI+"    [label= \" DPI: "+aux.DPI+
+                            texto+="    NTH"+aux.DPI+"    [label= \" DPI: "+aux.DPI+
                                 " \\n Nombre:"+aux.Nombre+" "+aux.Apellido+
                             " \\n Fecha de Nacimiento:"+aux.Nacimiento+
                             " \\n Genero:"+aux.Genero+
@@ -263,6 +255,7 @@ public class TablaH {
                             " \\n Dirección:"+aux.Direccion+
                                 "\" ] \n";
                         }
+                        
                     }
                 }
 
@@ -284,6 +277,7 @@ public class TablaH {
         String Direccion;
         String Nacimiento;
         int estado;
+        int viajes;
         public NodoTH(long dpi, String nombre,String Ape, String gen, String nacimiento, String Tel, String dir){
             siguiente = null;
             DPI = dpi;
@@ -295,6 +289,7 @@ public class TablaH {
             estado=0;
             Nacimiento = nacimiento;
             anterior = null;
+            viajes = 0;
         }
     }
 }
