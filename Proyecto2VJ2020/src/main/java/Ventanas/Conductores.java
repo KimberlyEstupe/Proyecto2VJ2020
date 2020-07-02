@@ -3,20 +3,20 @@ import Estructuras.BlochChain;
 import java.awt.Color;
 import javax.swing.JOptionPane;//JOptionPane.showMessageDialog(null, "Aux: "+Cabeza.DPI, "ERROR", JOptionPane.ERROR_MESSAGE);
 import Estructuras.DoblementeEnlazada;
-import Estructuras.ListaAdyacencia;
+import Estructuras.Grafo;
 import Estructuras.TablaH;
 /*
  *
  * @author KimberlyEstupe
  */
 public class Conductores extends javax.swing.JFrame {    
-ListaAdyacencia LA;
+Grafo LA;
 DoblementeEnlazada DE;
 TablaH TH;
 BlochChain BC;
 String anterior;
 
-    public Conductores(DoblementeEnlazada de, TablaH th ,ListaAdyacencia la, BlochChain bc) {
+    public Conductores(DoblementeEnlazada de, TablaH th ,Grafo la, BlochChain bc) {
         LA = la;
         DE = de;
         TH = th;

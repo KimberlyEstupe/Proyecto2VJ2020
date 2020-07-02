@@ -4,3 +4,5 @@ Bilbao/Valladolid/338%
 Zaragoza/Barcelona/258%
 Barcelona/Gerona/158%
 Zaragoza/Madrid/784%
+Oviedo/Madrid/784%
+Oviedo/Valladolid/104%

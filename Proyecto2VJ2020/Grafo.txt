@@ -1,0 +1,23 @@
+digraph G { 
+   node [shape = rectangle fontname="Arial" fontsize="10"]
+   graph [nodesep = 0.4]
+   label = < <font color='mediumvioletred'> <font point-size='20'>MAPA DE RUTAS </font></font>>;
+   labelloc = "t"; 
+   node [shape = ellipse ]
+   NG0 [label= "Oviedo" ] 
+   NG0 -> NG1[label= "304", color=brown1]
+   NG0 -> NG6[label= "784", color=brown1]
+   NG0 -> NG3[label= "104", color=brown1]
+   NG1 [label= "Bilbao" ] 
+   NG1 -> NG2[label= "324", color=brown1]
+   NG1 -> NG3[label= "338", color=brown1]
+   NG2 [label= "Zaragoza" ] 
+   NG2 -> NG4[label= "258", color=brown1]
+   NG2 -> NG6[label= "784", color=brown1]
+   NG3 [label= "Valladolid" ] 
+   NG4 [label= "Barcelona" ] 
+   NG4 -> NG5[label= "158", color=brown1]
+   NG5 [label= "Gerona" ] 
+   NG6 [label= "Madrid" ] 
+   
+}

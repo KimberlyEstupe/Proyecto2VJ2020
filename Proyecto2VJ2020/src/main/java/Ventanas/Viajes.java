@@ -8,7 +8,7 @@ import java.util.Calendar;
 import javax.swing.DefaultListModel;
 import Estructuras.DoblementeEnlazada;
 import Estructuras.DoblementeEnlazada.NodoDE;
-import Estructuras.ListaAdyacencia;
+import Estructuras.Grafo;
 import Estructuras.TablaH;
 import Estructuras.TablaH.NodoTH;
 import Estructuras.BlochChain;
@@ -22,7 +22,7 @@ import javax.swing.JOptionPane;
  * @author KimberlyEstupe
  */
 public class Viajes extends javax.swing.JFrame {
-ListaAdyacencia LA;
+Grafo LA;
 DoblementeEnlazada DE;
 TablaH TH;
 BlochChain BC;
@@ -31,7 +31,7 @@ BlochChain BC;
     /**
      * Creates new form Viajes
      */
-    public Viajes(DoblementeEnlazada de, TablaH th ,ListaAdyacencia la, BlochChain bc) {
+    public Viajes(DoblementeEnlazada de, TablaH th ,Grafo la, BlochChain bc) {
         initComponents();
         LA = la;
         DE = de;

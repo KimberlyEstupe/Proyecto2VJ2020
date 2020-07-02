@@ -236,7 +236,7 @@ public class TablaH {
                     if(i!=Tam-1) texto+="|\n";
                 }
 
-                texto+="   \", height=2.5]; \n    node [shape=component] \n";
+                texto+="   \", height=2]; \n    node [shape=component] \n";
 
                 //Listas enlazadas 
                 for(int i = 0; i<Tam-1; i++){

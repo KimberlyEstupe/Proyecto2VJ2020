@@ -3,23 +3,23 @@ package Ventanas;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 import Estructuras.DoblementeEnlazada;
-import Estructuras.ListaAdyacencia;
 import Estructuras.TablaH;
 import Estructuras.BlochChain;
+import Estructuras.Grafo;
 import Estructuras.Tops;
 /**
  *
  * @author KimberlyEstupe
  */
 public class VTOPS extends javax.swing.JFrame {
-    ListaAdyacencia LA;
+    Grafo LA;
     DoblementeEnlazada DE;
     TablaH TH;
     BlochChain BC;
     Tops TConductores = new Tops();
     Tops TClientes= new Tops();
     
-    public VTOPS(DoblementeEnlazada de, TablaH th ,ListaAdyacencia la, BlochChain bc) {
+    public VTOPS(DoblementeEnlazada de, TablaH th ,Grafo la, BlochChain bc) {
         LA = la;
         DE = de;
         TH = th;
@@ -160,7 +160,7 @@ public class VTOPS extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        this. setVisible(false);
+       this. setVisible(false);
        RutasIn RI= new RutasIn(DE, TH, LA, BC);       
        RI.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
