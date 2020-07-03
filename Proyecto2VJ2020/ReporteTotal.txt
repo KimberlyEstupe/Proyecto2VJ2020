@@ -6,163 +6,138 @@ digraph G {
  rankdir = Lista; 
    node [shape=tab] 
    {rank=same 
-      NDE1234567890123 [label= "DPI: 1234567890123
-         Nombre: Marisela 
-         Apelliod: Arrebalo
-         Genero: Femenino
-         Telefono: 987456
-         Tipo de Licencia: A
-         Direccion: GUATEMLA" ] 
+      NDE1234567890123 [label= "DPI: 1234567890123\n         Nombre: Marisela \n         Apelliod: Arrebalo\n         Genero: Femenino\n         Telefono: 987456\n         Tipo de Licencia: A\n         Direccion: GUATEMLA" ] 
       NDE1234567890123 -> NDE1478520369874 [color=blue3][dir=both]
-      NDE1478520369874 [label= "DPI: 1478520369874
-         Nombre: Marisol 
-         Apelliod: De Leon
-         Genero: Femenino
-         Telefono: 3225
-         Tipo de Licencia: B
-         Direccion: Alemania" ] 
+      NDE1478520369874 [label= "DPI: 1478520369874\n         Nombre: Marisol \n         Apelliod: De Leon\n         Genero: Femenino\n         Telefono: 3225\n         Tipo de Licencia: B\n         Direccion: Alemania" ] 
       NDE1478520369874 -> NDE3214569879632 [color=blue3][dir=both]
-      NDE3214569879632 [label= "DPI: 3214569879632
-         Nombre: Antonio 
-         Apelliod: Del Valle
-         Genero: Masculino
-         Telefono: 99874
-         Tipo de Licencia: A
-         Direccion: Brasil" ] 
+      NDE3214569879632 [label= "DPI: 3214569879632\n         Nombre: Antonio \n         Apelliod: Del Valle\n         Genero: Masculino\n         Telefono: 99874\n         Tipo de Licencia: A\n         Direccion: Brasil" ] 
       NDE3214569879632 -> NDE5874693215635 [color=blue3][dir=both]
-      NDE5874693215635 [label= "DPI: 5874693215635
-         Nombre: Luis Esteban 
-         Apelliod: SEDR
-         Genero: Masculino
-         Telefono: 87458
-         Tipo de Licencia: B
-         Direccion: Jalapa" ] 
+      NDE5874693215635 [label= "DPI: 5874693215635\n         Nombre: Luis Esteban \n         Apelliod: SEDR\n         Genero: Masculino\n         Telefono: 87450068\n         Tipo de Licencia: B\n         Direccion: Jutiapa" ] 
       NDE5874693215635 -> NDE7463028256641 [color=blue3][dir=both]
-      NDE7463028256641 [label= "DPI: 7463028256641
-         Nombre: Marcos Javier 
-         Apelliod: Cabrera
-         Genero: Masculino
-         Telefono: 98745
-         Tipo de Licencia: C
-         Direccion: Nicaragua" ] 
+      NDE7463028256641 [label= "DPI: 7463028256641\n         Nombre: Marcos Javier \n         Apelliod: Cabrera\n         Genero: Masculino\n         Telefono: 98745\n         Tipo de Licencia: C\n         Direccion: Nicaragua" ] 
       NDE7463028256641 -> NDE8521478963001 [color=blue3][dir=both]
-      NDE8521478963001 [label= "DPI: 8521478963001
-         Nombre: Sofia Elizabeth 
-         Apelliod: JJHO
-         Genero: Femenino
-         Telefono: 20555
-         Tipo de Licencia: C
-         Direccion: Guadalajara" ] 
-      NDE8521478963001 -> NDE1234567890123 [color=blue3][dir=both]
+      NDE8521478963001 [label= "DPI: 8521478963001\n         Nombre: Sofia Elizabeth \n         Apelliod: JJHO\n         Genero: Femenino\n         Telefono: 20555\n         Tipo de Licencia: C\n         Direccion: Guadalajara" ] 
+      NDE8521478963001 -> NDE9874563210147 [color=blue3][dir=both]
+      NDE9874563210147 [label= "DPI: 9874563210147\n         Nombre: Ana Jasmin \n         Apelliod: Asterin Del Valle\n         Genero: Femenino\n         Telefono: 56225001\n         Tipo de Licencia: B\n         Direccion: 5ta Av" ] 
+      NDE9874563210147 -> NDE1234567890123 [color=blue3][dir=both]
    }
 
  
  rankdir = Lista; 
    node [shape=note]
    {rank=same 
-      NBC56a001831792f1ff88579b6239f2235d [label= " Clave: 56a001831792f1ff88579b6239f2235d\n Cliente: 1234567890123, Marisela\n Conductor: 1234567891234,  Maria del Carmen\n Origen: Peten\n Destino: Guatemala\n Fecha: 30/6/2020\n Hora: 23:29:5" ] 
-      NBC56a001831792f1ff88579b6239f2235d -> NBC4141974dce4cc8b083c3a54651f8c605 [color=darkorchid4][dir=both]
-      NBC4141974dce4cc8b083c3a54651f8c605 [label= " Clave: 4141974dce4cc8b083c3a54651f8c605\n Cliente: 1478520369874, Marisol\n Conductor: 3050714054627, Damira\n Origen: Jalapa\n Destino: Jutiapa\n Fecha: 30/6/2020\n Hora: 23:30:5" ] 
+      NBC325fff4a4240f19889f5521aa4946525 [label= " Clave: 325fff4a4240f19889f5521aa4946525\n Conductor: 9874563210147, Ana Jasmin\n Cliente: 23, Elder Jasper\n Origen: Peten\n Destino: Guatemala\n Fecha: 2/7/2020\n Hora: 22:50:5" ] 
+      NBC325fff4a4240f19889f5521aa4946525 -> NBCdbeb12ceb3c115ac05e675dfa25eac46 [color=darkorchid4][dir=both]
+      NBCdbeb12ceb3c115ac05e675dfa25eac46 [label= " Clave: dbeb12ceb3c115ac05e675dfa25eac46\n Conductor: 1234567890123, Marisela\n Cliente: 23, Elder Jasper\n Origen: Mexico\n Destino: Antigua\n Fecha: 2/7/2020\n Hora: 22:50:35" ] 
+      NBCdbeb12ceb3c115ac05e675dfa25eac46 -> NBC35497676d688fce082e556942ded52fb [color=darkorchid4][dir=both]
+      NBC35497676d688fce082e556942ded52fb [label= " Clave: 35497676d688fce082e556942ded52fb\n Conductor: 1478520369874, Marisol\n Cliente: 1369874500125,  Fernando\n Origen: California\n Destino: San Cristobal\n Fecha: 2/7/2020\n Hora: 22:51:50" ] 
+      NBC35497676d688fce082e556942ded52fb -> NBC910e21136d86e78402f37f6d579db8dc [color=darkorchid4][dir=both]
+      NBC910e21136d86e78402f37f6d579db8dc [label= " Clave: 910e21136d86e78402f37f6d579db8dc\n Conductor: 8521478963001, Sofia Elizabeth\n Cliente: 1234567891234,  Maria del Carmen\n Origen: Jalapa\n Destino: Jutiapa\n Fecha: 2/7/2020\n Hora: 22:55:7" ] 
+      NBC910e21136d86e78402f37f6d579db8dc -> NBC44ba097bf2c77f302f0790c76cc95262 [color=darkorchid4][dir=both]
+      NBC44ba097bf2c77f302f0790c76cc95262 [label= " Clave: 44ba097bf2c77f302f0790c76cc95262\n Conductor: 1234567890123, Marisela\n Cliente: 6547520398779, Rudy\n Origen: Velaris\n Destino: Bajo la montaña\n Fecha: 2/7/2020\n Hora: 22:56:12" ] 
+      NBC44ba097bf2c77f302f0790c76cc95262 -> NBC0f4098a500cf84f67a47d9caff976129 [color=darkorchid4][dir=both]
+      NBC0f4098a500cf84f67a47d9caff976129 [label= " Clave: 0f4098a500cf84f67a47d9caff976129\n Conductor: 7463028256641, Marcos Javier\n Cliente: 9874563210123,  Maria del Rosario\n Origen: Zacapa\n Destino: Peten\n Fecha: 2/7/2020\n Hora: 22:57:18" ] 
    }
 
  
  rankdir=LR; 
    node [shape=record,width=.1,height=.1]; 
    N0 [label = " 
-    <f0> \n \n \n \n 0 \n \n \n \n|
-    <f1> \n \n \n \n 1 \n \n \n \n|
-    <f2> \n \n \n \n 2 \n \n \n \n|
-    <f3> \n \n \n \n 3 \n \n \n \n|
-    <f4> \n \n \n \n 4 \n \n \n \n|
-    <f5> \n \n \n \n 5 \n \n \n \n|
-    <f6> \n \n \n \n 6 \n \n \n \n|
-    <f7> \n \n \n \n 7 \n \n \n \n|
-    <f8> \n \n \n \n 8 \n \n \n \n|
-    <f9> \n \n \n \n 9 \n \n \n \n|
-    <f10> \n \n \n \n 10 \n \n \n \n|
-    <f11> \n \n \n \n 11 \n \n \n \n|
-    <f12> \n \n \n \n 12 \n \n \n \n|
-    <f13> \n \n \n \n 13 \n \n \n \n|
-    <f14> \n \n \n \n 14 \n \n \n \n|
-    <f15> \n \n \n \n 15 \n \n \n \n|
-    <f16> \n \n \n \n 16 \n \n \n \n|
-    <f17> \n \n \n \n 17 \n \n \n \n|
-    <f18> \n \n \n \n 18 \n \n \n \n|
-    <f19> \n \n \n \n 19 \n \n \n \n|
-    <f20> \n \n \n \n 20 \n \n \n \n|
-    <f21> \n \n \n \n 21 \n \n \n \n|
-    <f22> \n \n \n \n 22 \n \n \n \n|
-    <f23> \n \n \n \n 23 \n \n \n \n|
-    <f24> \n \n \n \n 24 \n \n \n \n|
-    <f25> \n \n \n \n 25 \n \n \n \n|
-    <f26> \n \n \n \n 26 \n \n \n \n|
-    <f27> \n \n \n \n 27 \n \n \n \n|
-    <f28> \n \n \n \n 28 \n \n \n \n|
-    <f29> \n \n \n \n 29 \n \n \n \n|
-    <f30> \n \n \n \n 30 \n \n \n \n|
-    <f31> \n \n \n \n 31 \n \n \n \n|
-    <f32> \n \n \n \n 32 \n \n \n \n|
-    <f33> \n \n \n \n 33 \n \n \n \n|
-    <f34> \n \n \n \n 34 \n \n \n \n|
-    <f35> \n \n \n \n 35 \n \n \n \n|
-    <f36> \n \n \n \n 36 \n \n \n \n   ", height=2.5]; 
+    <f0> \n \n \n 0 \n \n \n \n|
+    <f1> \n \n \n 1 \n \n \n \n|
+    <f2> \n \n \n 2 \n \n \n \n|
+    <f3> \n \n \n 3 \n \n \n \n|
+    <f4> \n \n \n 4 \n \n \n \n|
+    <f5> \n \n \n 5 \n \n \n \n|
+    <f6> \n \n \n 6 \n \n \n \n|
+    <f7> \n \n \n 7 \n \n \n \n|
+    <f8> \n \n \n 8 \n \n \n \n|
+    <f9> \n \n \n 9 \n \n \n \n|
+    <f10> \n \n \n 10 \n \n \n \n|
+    <f11> \n \n \n 11 \n \n \n \n|
+    <f12> \n \n \n 12 \n \n \n \n|
+    <f13> \n \n \n 13 \n \n \n \n|
+    <f14> \n \n \n 14 \n \n \n \n|
+    <f15> \n \n \n 15 \n \n \n \n|
+    <f16> \n \n \n 16 \n \n \n \n|
+    <f17> \n \n \n 17 \n \n \n \n|
+    <f18> \n \n \n 18 \n \n \n \n|
+    <f19> \n \n \n 19 \n \n \n \n|
+    <f20> \n \n \n 20 \n \n \n \n|
+    <f21> \n \n \n 21 \n \n \n \n|
+    <f22> \n \n \n 22 \n \n \n \n|
+    <f23> \n \n \n 23 \n \n \n \n|
+    <f24> \n \n \n 24 \n \n \n \n|
+    <f25> \n \n \n 25 \n \n \n \n|
+    <f26> \n \n \n 26 \n \n \n \n|
+    <f27> \n \n \n 27 \n \n \n \n|
+    <f28> \n \n \n 28 \n \n \n \n|
+    <f29> \n \n \n 29 \n \n \n \n|
+    <f30> \n \n \n 30 \n \n \n \n|
+    <f31> \n \n \n 31 \n \n \n \n|
+    <f32> \n \n \n 32 \n \n \n \n|
+    <f33> \n \n \n 33 \n \n \n \n|
+    <f34> \n \n \n 34 \n \n \n \n|
+    <f35> \n \n \n 35 \n \n \n \n|
+    <f36> \n \n \n 36 \n \n \n \n|
+    <f37> \n \n \n 37 \n \n \n \n|
+    <f38> \n \n \n 38 \n \n \n \n|
+    <f39> \n \n \n 39 \n \n \n \n|
+    <f40> \n \n \n 40 \n \n \n \n|
+    <f41> \n \n \n 41 \n \n \n \n|
+    <f42> \n \n \n 42 \n \n \n \n|
+    <f43> \n \n \n 43 \n \n \n \n|
+    <f44> \n \n \n 44 \n \n \n \n|
+    <f45> \n \n \n 45 \n \n \n \n|
+    <f46> \n \n \n 46 \n \n \n \n|
+    <f47> \n \n \n 47 \n \n \n \n|
+    <f48> \n \n \n 48 \n \n \n \n|
+    <f49> \n \n \n 49 \n \n \n \n|
+    <f50> \n \n \n 50 \n \n \n \n|
+    <f51> \n \n \n 51 \n \n \n \n|
+    <f52> \n \n \n 52 \n \n \n \n|
+    <f53> \n \n \n 53 \n \n \n \n|
+    <f54> \n \n \n 54 \n \n \n \n|
+    <f55> \n \n \n 55 \n \n \n \n|
+    <f56> \n \n \n 56 \n \n \n \n|
+    <f57> \n \n \n 57 \n \n \n \n|
+    <f58> \n \n \n 58 \n \n \n \n|
+    <f59> \n \n \n 59 \n \n \n \n|
+    <f60> \n \n \n 60 \n \n \n \n|
+    <f61> \n \n \n 61 \n \n \n \n|
+    <f62> \n \n \n 62 \n \n \n \n|
+    <f63> \n \n \n 63 \n \n \n \n|
+    <f64> \n \n \n 64 \n \n \n \n|
+    <f65> \n \n \n 65 \n \n \n \n|
+    <f66> \n \n \n 66 \n \n \n \n|
+    <f67> \n \n \n 67 \n \n \n \n|
+    <f68> \n \n \n 68 \n \n \n \n|
+    <f69> \n \n \n 69 \n \n \n \n|
+    <f70> \n \n \n 70 \n \n \n \n|
+    <f71> \n \n \n 71 \n \n \n \n|
+    <f72> \n \n \n 72 \n \n \n \n|
+    <f73> \n \n \n 73 \n \n \n \n   ", height=2]; 
     node [shape=component] 
-
-   
-  N0:f0 -> NTH7798742547015 
-    NTH7798742547015    [label= " DPI: 7798742547015 \n Nombre:Tony Malavath \n Fecha de Nacimiento:11/06/1993 \n Genero:Masculino, Telefono:25877463 \n Dirección:Ciudad de Guatemala" ] 
-    NTH7798742547015 -> NTH3584500256655 
-    NTH3584500256655    [label= " DPI: 3584500256655 \n Nombre: Ana Gabriera  Perez Corado \n Fecha de Nacimiento: 09/05/1822 \n Genero: Femenino, Telefono:12365478 \n Dirección: 5av calle emperador Ciudad de Guatemala" ] 
-    NTH3584500256655 -> NTH1254698745633 
-    NTH1254698745633    [label= " DPI: 1254698745633 \n Nombre: Jose Carlos  Lopez Morales \n Fecha de Nacimiento: 17/08/1982 \n Genero: Masculino, Telefono:12547896 \n Dirección: 17-01 Z.6 Ciudad deGuatemala" ] 
 
    
   N0:f2 -> NTH6581874004350 
     NTH6581874004350    [label= " DPI: 6581874004350 \n Nombre:Tono Menchu Tom \n Fecha de Nacimiento:20/04/1874 \n Genero:Masculino, Telefono:22887029 \n Dirección:Ciudad de Guatemala" ] 
-    NTH6581874004350 -> NTH2954698871511 
-    NTH2954698871511    [label= " DPI: 2954698871511 \n Nombre: Ana Maria  Perez Corado \n Fecha de Nacimiento: 09/05/1822 \n Genero: Femenino, Telefono:12365478 \n Dirección: 5av calle emperador Ciudad de Guatemala" ] 
 
    
   N0:f3 -> NTH9874563210123 
     NTH9874563210123    [label= " DPI: 9874563210123 \n Nombre: Maria del Rosario  Juarez Mendoza \n Fecha de Nacimiento: 22/04/1940 \n Genero: Femenino, Telefono:95478032 \n Dirección: 7ta calle Ciudad de Guatemala" ] 
-    NTH9874563210123 -> NTH1234567891234 
-    NTH1234567891234    [label= " DPI: 1234567891234 \n Nombre: Maria del Carmen  Lopez Juarez \n Fecha de Nacimiento: 22/04/1940 \n Genero: Femenino, Telefono:95478032 \n Dirección: 8ta calle Ciudad de Guatemala" ] 
-
-   
-  N0:f4 -> NTH7798742547019 
-    NTH7798742547019    [label= " DPI: 7798742547019 \n Nombre:Tania Romanof \n Fecha de Nacimiento:14/03/1879 \n Genero:Femenino, Telefono:50697004 \n Dirección:Ciudad de Guatemala" ] 
 
    
   N0:f5 -> NTH3050714054627 
     NTH3050714054627    [label= " DPI: 3050714054627 \n Nombre:Damira Wu \n Fecha de Nacimiento:23/14/1974 \n Genero:Femenino, Telefono:36987452 \n Dirección:Ciudad de Guatemala" ] 
 
    
-  N0:f6 -> NTH2954698872255 
-    NTH2954698872255    [label= " DPI: 2954698872255 \n Nombre: Marcos  Theradam \n Fecha de Nacimiento: 09/05/1822 \n Genero: Masculino, Telefono:12365478 \n Dirección: 5av calle emperador Ciudad de Guatemala" ] 
-    NTH2954698872255 -> NTH3578946100155 
-    NTH3578946100155    [label= " DPI: 3578946100155 \n Nombre: Kevin Murad \n Fecha de Nacimiento:05/09/1822 \n Genero:Masculino, Telefono:22145569 \n Dirección:Ciudad de Guatemala" ] 
-
-   
   N0:f8 -> NTH8944796100158 
     NTH8944796100158    [label= " DPI: 8944796100158 \n Nombre:Jonatan Dengping \n Fecha de Nacimiento:31/07/1877 \n Genero:Masculino, Telefono:33652478 \n Dirección:Ciudad de Guatemala" ] 
 
    
-  N0:f9 -> NTH2954698871888 
-    NTH2954698871888    [label= " DPI: 2954698871888 \n Nombre: Sofia  Mejia Obrado \n Fecha de Nacimiento: 09/05/1822 \n Genero: Femenino, Telefono:12365478 \n Dirección: 5av calle emperador Ciudad de Guatemala" ] 
-
-   
-  N0:f11 -> NTH7798742547026 
-    NTH7798742547026    [label= " DPI: 7798742547026 \n Nombre:Sara Estrada \n Fecha de Nacimiento:28/02/1998 \n Genero:Femenino, Telefono:88745523 \n Dirección:Ciudad de Guatemala" ] 
-    NTH7798742547026 -> NTH9996587463250 
-    NTH9996587463250    [label= " DPI: 9996587463250 \n Nombre:Oscar Gordimer \n Fecha de Nacimiento:22/06/1715 \n Genero:Masculino, Telefono:20012305 \n Dirección:Ciudad de Guatemala" ] 
-
-   
   N0:f12 -> NTH6547120398754 
     NTH6547120398754    [label= " DPI: 6547120398754 \n Nombre:Amaly Brown \n Fecha de Nacimiento:03/04/1778 \n Genero:Femenino, Telefono:33549235 \n Dirección:Ciudad de Guatemala" ] 
-
-   
-  N0:f13 -> NTH1259863547896 
-    NTH1259863547896    [label= " DPI: 1259863547896 \n Nombre:Lesly Thuth \n Fecha de Nacimiento:24/04/1874 \n Genero:Femenino, Telefono:20587001 \n Dirección:Ciudad de Guatemala" ] 
 
    
   N0:f14 -> NTH6985234784632 
@@ -173,73 +148,135 @@ digraph G {
     NTH8742545477019    [label= " DPI: 8742545477019 \n Nombre:Sharon Mills \n Fecha de Nacimiento:22/07/1874 \n Genero:Femenino, Telefono:36005877 \n Dirección:Ciudad de Guatemala" ] 
 
    
-  N0:f16 -> NTH5478123069747 
-    NTH5478123069747    [label= " DPI: 5478123069747 \n Nombre:Imelda Grey \n Fecha de Nacimiento: 11/10/1972 \n Genero:Femenino, Telefono:97458821 \n Dirección:Ciudad de Guatemala" ] 
-
-   
-  N0:f17 -> NTH4501028255746 
-    NTH4501028255746    [label= " DPI: 4501028255746 \n Nombre:Daniela Liu \n Fecha de Nacimiento:32127 \n Genero:Femenino, Telefono:22546632 \n Dirección:Ciudad de Guatemala" ] 
-
-   
-  N0:f18 -> NTH5478123069749 
-    NTH5478123069749    [label= " DPI: 5478123069749 \n Nombre:Maria Jose Vladimir \n Fecha de Nacimiento:19/08/2005 \n Genero:Femenino, Telefono:96300144 \n Dirección:Ciudad de Guatemala" ] 
-
-   
-  N0:f19 -> NTH1369874826502 
-    NTH1369874826502    [label= " DPI: 1369874826502 \n Nombre: Cassian  Del Valle \n Fecha de Nacimiento: 17/08/1982 \n Genero: Masculino, Telefono:12547896 \n Dirección: Ciudad de Guatemala" ] 
-    NTH1369874826502 -> NTH1369874500125 
+  N0:f19 -> NTH1369874500125 
     NTH1369874500125    [label= " DPI: 1369874500125 \n Nombre: Fernando  Arias \n Fecha de Nacimiento: 17/08/1982 \n Genero: Masculino, Telefono:12547896 \n Dirección: Ciudad de Guatemala" ] 
-
-   
-  N0:f20 -> NTH8123069747479 
-    NTH8123069747479    [label= " DPI: 8123069747479 \n Nombre:Marisol Saqui \n Fecha de Nacimiento:22/15/2020 \n Genero:Femenino, Telefono:95124786 \n Dirección:Ciudad de Guatemala" ] 
 
    
   N0:f21 -> NTH9632587410011 
     NTH9632587410011    [label= " DPI: 9632587410011 \n Nombre: Karmen Elizabeth  Fernandez Urbina \n Fecha de Nacimiento:22/04/1940 \n Genero: Masculino, Telefono:95478032 \n Dirección: 6ta calle Ciudad de Guatemala" ] 
 
    
-  N0:f22 -> NTH9635874120049 
-    NTH9635874120049    [label= " DPI: 9635874120049 \n Nombre:Lara Messina \n Fecha de Nacimiento:34271 \n Genero:Femenino, Telefono:69874563 \n Dirección:Ciudad de Guatemala" ] 
+  N0:f23 -> NTH23 
+    NTH23    [label= " DPI: 23 \n Nombre:Elder Jasper Sorin del Cid \n Fecha de Nacimiento:22/03/1944 \n Genero:Masculino, Telefono:25874693 \n Dirección:Ciudad Capital del Sol" ] 
 
    
   N0:f24 -> NTH6588774400476 
     NTH6588774400476    [label= " DPI: 6588774400476 \n Nombre:Segio Tharp \n Fecha de Nacimiento:22/04/1874 \n Genero:Masculino, Telefono:20014789 \n Dirección:Ciudad de Guatemala" ] 
-    NTH6588774400476 -> NTH3058807496547 
-    NTH3058807496547    [label= " DPI: 3058807496547 \n Nombre:Lorenzo Ferrara \n Fecha de Nacimiento:18/05/1874 \n Genero:Masculino, Telefono:65874520 \n Dirección:Ciudad de Guatemala" ] 
 
    
   N0:f28 -> NTH4784236987422 
     NTH4784236987422    [label= " DPI: 4784236987422 \n Nombre:Ruby Hall \n Fecha de Nacimiento:22/05/1874 \n Genero:Femenino, Telefono:33258874 \n Dirección:Ciudad de Guatemala" ] 
 
    
-  N0:f30 -> NTH4225415490191 
-    NTH4225415490191    [label= " DPI: 4225415490191 \n Nombre:Federico Esposito \n Fecha de Nacimiento:36110 \n Genero:Masculino, Telefono:33956475 \n Dirección:Ciudad de Guatemala" ] 
-    NTH4225415490191 -> NTH6581874004378 
+  N0:f30 -> NTH6581874004378 
     NTH6581874004378    [label= " DPI: 6581874004378 \n Nombre:Luis Samayoa \n Fecha de Nacimiento: 15/04/1996 \n Genero:Masculino, Telefono:39700154 \n Dirección:Ciudad de Guatemala" ] 
-    NTH6581874004378 -> NTH6547520398779 
-    NTH6547520398779    [label= " DPI: 6547520398779 \n Nombre:Rudy Rodriguez \n Fecha de Nacimiento:22/02/1982 \n Genero:Masculino, Telefono:20563461 \n Dirección:Ciudad de Guatemala" ] 
-    NTH6547520398779 -> NTH8123069757479 
-    NTH8123069757479    [label= " DPI: 8123069757479 \n Nombre:Norberto Gonzales \n Fecha de Nacimiento:25/01/1983 \n Genero:Masculino, Telefono:44556699 \n Dirección:Ciudad de Guatemala" ] 
 
    
-  N0:f31 -> NTH3697448002546 
+  N0:f36 -> NTH6581997874020 
+    NTH6581997874020    [label= " DPI: 6581997874020 \n Nombre:Francisco Park \n Fecha de Nacimiento:35650 \n Genero:Masculino, Telefono:22557746 \n Dirección:Ciudad de Guatemala" ] 
+
+   
+  N0:f37 -> NTH1254698745633 
+    NTH1254698745633    [label= " DPI: 1254698745633 \n Nombre: Jose Carlos  Lopez Morales \n Fecha de Nacimiento: 17/08/1982 \n Genero: Masculino, Telefono:12547896 \n Dirección: 17-01 Z.6 Ciudad deGuatemala" ] 
+    NTH1254698745633 -> NTH3584500256655 
+    NTH3584500256655    [label= " DPI: 3584500256655 \n Nombre: Ana Gabriera  Perez Corado \n Fecha de Nacimiento: 09/05/1822 \n Genero: Femenino, Telefono:12365478 \n Dirección: 5av calle emperador Ciudad de Guatemala" ] 
+    NTH3584500256655 -> NTH7798742547015 
+    NTH7798742547015    [label= " DPI: 7798742547015 \n Nombre:Tony Malavath \n Fecha de Nacimiento:11/06/1993 \n Genero:Masculino, Telefono:25877463 \n Dirección:Ciudad de Guatemala" ] 
+
+   
+  N0:f39 -> NTH2954698871511 
+    NTH2954698871511    [label= " DPI: 2954698871511 \n Nombre: Ana Maria  Perez Corado \n Fecha de Nacimiento: 09/05/1822 \n Genero: Femenino, Telefono:12365478 \n Dirección: 5av calle emperador Ciudad de Guatemala" ] 
+
+   
+  N0:f40 -> NTH1234567891234 
+    NTH1234567891234    [label= " DPI: 1234567891234 \n Nombre: Maria del Carmen  Lopez Juarez \n Fecha de Nacimiento: 22/04/1940 \n Genero: Femenino, Telefono:95478032 \n Dirección: 8ta calle Ciudad de Guatemala" ] 
+
+   
+  N0:f41 -> NTH7798742547019 
+    NTH7798742547019    [label= " DPI: 7798742547019 \n Nombre:Tania Romanof \n Fecha de Nacimiento:14/03/1879 \n Genero:Femenino, Telefono:50697004 \n Dirección:Ciudad de Guatemala" ] 
+
+   
+  N0:f43 -> NTH3578946100155 
+    NTH3578946100155    [label= " DPI: 3578946100155 \n Nombre: Kevin Murad \n Fecha de Nacimiento:05/09/1822 \n Genero:Masculino, Telefono:22145569 \n Dirección:Ciudad de Guatemala" ] 
+    NTH3578946100155 -> NTH2954698872255 
+    NTH2954698872255    [label= " DPI: 2954698872255 \n Nombre: Marcos  Theradam \n Fecha de Nacimiento: 09/05/1822 \n Genero: Masculino, Telefono:12365478 \n Dirección: 5av calle emperador Ciudad de Guatemala" ] 
+
+   
+  N0:f46 -> NTH2954698871888 
+    NTH2954698871888    [label= " DPI: 2954698871888 \n Nombre: Sofia  Mejia Obrado \n Fecha de Nacimiento: 09/05/1822 \n Genero: Femenino, Telefono:12365478 \n Dirección: 5av calle emperador Ciudad de Guatemala" ] 
+
+   
+  N0:f48 -> NTH9996587463250 
+    NTH9996587463250    [label= " DPI: 9996587463250 \n Nombre:Oscar Gordimer \n Fecha de Nacimiento:22/06/1715 \n Genero:Masculino, Telefono:20012305 \n Dirección:Ciudad de Guatemala" ] 
+    NTH9996587463250 -> NTH7798742547026 
+    NTH7798742547026    [label= " DPI: 7798742547026 \n Nombre:Sara Estrada \n Fecha de Nacimiento:28/02/1998 \n Genero:Femenino, Telefono:88745523 \n Dirección:Ciudad de Guatemala" ] 
+
+   
+  N0:f50 -> NTH1259863547896 
+    NTH1259863547896    [label= " DPI: 1259863547896 \n Nombre:Lesly Thuth \n Fecha de Nacimiento:24/04/1874 \n Genero:Femenino, Telefono:20587001 \n Dirección:Ciudad de Guatemala" ] 
+
+   
+  N0:f53 -> NTH5478123069747 
+    NTH5478123069747    [label= " DPI: 5478123069747 \n Nombre:Imelda Grey \n Fecha de Nacimiento: 11/10/1972 \n Genero:Femenino, Telefono:97458821 \n Dirección:Ciudad de Guatemala" ] 
+
+   
+  N0:f54 -> NTH4501028255746 
+    NTH4501028255746    [label= " DPI: 4501028255746 \n Nombre:Daniela Liu \n Fecha de Nacimiento:32127 \n Genero:Femenino, Telefono:22546632 \n Dirección:Ciudad de Guatemala" ] 
+
+   
+  N0:f55 -> NTH5478123069749 
+    NTH5478123069749    [label= " DPI: 5478123069749 \n Nombre:Maria Jose Vladimir \n Fecha de Nacimiento:19/08/2005 \n Genero:Femenino, Telefono:96300144 \n Dirección:Ciudad de Guatemala" ] 
+
+   
+  N0:f56 -> NTH1369874826502 
+    NTH1369874826502    [label= " DPI: 1369874826502 \n Nombre: Cassian  Del Valle \n Fecha de Nacimiento: 17/08/1982 \n Genero: Masculino, Telefono:12547896 \n Dirección: Ciudad de Guatemala" ] 
+
+   
+  N0:f57 -> NTH8123069747479 
+    NTH8123069747479    [label= " DPI: 8123069747479 \n Nombre:Marisol Saqui \n Fecha de Nacimiento:22/15/2020 \n Genero:Femenino, Telefono:95124786 \n Dirección:Ciudad de Guatemala" ] 
+
+   
+  N0:f59 -> NTH9635874120049 
+    NTH9635874120049    [label= " DPI: 9635874120049 \n Nombre:Lara Messina \n Fecha de Nacimiento:34271 \n Genero:Femenino, Telefono:69874563 \n Dirección:Ciudad de Guatemala" ] 
+
+   
+  N0:f61 -> NTH3058807496547 
+    NTH3058807496547    [label= " DPI: 3058807496547 \n Nombre:Lorenzo Ferrara \n Fecha de Nacimiento:18/05/1874 \n Genero:Masculino, Telefono:65874520 \n Dirección:Ciudad de Guatemala" ] 
+
+   
+  N0:f67 -> NTH8123069757479 
+    NTH8123069757479    [label= " DPI: 8123069757479 \n Nombre:Norberto Gonzales \n Fecha de Nacimiento:25/01/1983 \n Genero:Masculino, Telefono:44556699 \n Dirección:Ciudad de Guatemala" ] 
+    NTH8123069757479 -> NTH6547520398779 
+    NTH6547520398779    [label= " DPI: 6547520398779 \n Nombre:Rudy Rodriguez \n Fecha de Nacimiento:22/02/1982 \n Genero:Masculino, Telefono:20563461 \n Dirección:Ciudad de Guatemala" ] 
+    NTH6547520398779 -> NTH4225415490191 
+    NTH4225415490191    [label= " DPI: 4225415490191 \n Nombre:Federico Esposito \n Fecha de Nacimiento:36110 \n Genero:Masculino, Telefono:33956475 \n Dirección:Ciudad de Guatemala" ] 
+
+   
+  N0:f68 -> NTH3697448002546 
     NTH3697448002546    [label= " DPI: 3697448002546 \n Nombre:Igancio Russo \n Fecha de Nacimiento:32045 \n Genero:Masculino, Telefono:22897461 \n Dirección:Ciudad de Guatemala" ] 
 
    
-  N0:f32 -> NTH5547800125479 
+  N0:f69 -> NTH5547800125479 
     NTH5547800125479    [label= " DPI: 5547800125479 \n Nombre:Armando Mair \n Fecha de Nacimiento:01/03/1744 \n Genero:Masculino, Telefono:39895025 \n Dirección:Ciudad de Guatemala" ] 
 
    
-  N0:f35 -> NTH2003588749654 
+  N0:f72 -> NTH2003588749654 
     NTH2003588749654    [label= " DPI: 2003588749654 \n Nombre:Laura Caruso \n Fecha de Nacimiento:22/01/1874 \n Genero:Femenino, Telefono:98088745 \n Dirección:Ciudad de Guatemala" ] 
 
  
 
-NBC56a001831792f1ff88579b6239f2235d -> NDE1234567890123 [color=deeppink3][dir=both]
-NBC56a001831792f1ff88579b6239f2235d -> NTH1234567891234 [color=darkgreen][dir=both]
-NBC4141974dce4cc8b083c3a54651f8c605 -> NDE1478520369874 [color=deeppink3][dir=both]
-NBC4141974dce4cc8b083c3a54651f8c605 -> NTH3050714054627 [color=darkgreen][dir=both]
+NBC325fff4a4240f19889f5521aa4946525 -> NDE9874563210147 [color=deeppink3][dir=both]
+NBC325fff4a4240f19889f5521aa4946525 -> NTH23 [color=darkgreen][dir=both]
+NBCdbeb12ceb3c115ac05e675dfa25eac46 -> NDE1234567890123 [color=deeppink3][dir=both]
+NBCdbeb12ceb3c115ac05e675dfa25eac46 -> NTH23 [color=darkgreen][dir=both]
+NBC35497676d688fce082e556942ded52fb -> NDE1478520369874 [color=deeppink3][dir=both]
+NBC35497676d688fce082e556942ded52fb -> NTH1369874500125 [color=darkgreen][dir=both]
+NBC910e21136d86e78402f37f6d579db8dc -> NDE8521478963001 [color=deeppink3][dir=both]
+NBC910e21136d86e78402f37f6d579db8dc -> NTH1234567891234 [color=darkgreen][dir=both]
+NBC44ba097bf2c77f302f0790c76cc95262 -> NDE1234567890123 [color=deeppink3][dir=both]
+NBC44ba097bf2c77f302f0790c76cc95262 -> NTH6547520398779 [color=darkgreen][dir=both]
+NBC0f4098a500cf84f67a47d9caff976129 -> NDE7463028256641 [color=deeppink3][dir=both]
+NBC0f4098a500cf84f67a47d9caff976129 -> NTH9874563210123 [color=darkgreen][dir=both]
   
    
 }

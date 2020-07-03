@@ -6,54 +6,20 @@ digraph G {
  rankdir = Lista; 
    node [shape=tab] 
    {rank=same 
-      NDE1234567890123 [label= "DPI: 1234567890123
-         Nombre: Marisela 
-         Apelliod: Arrebalo
-         Genero: Femenino
-         Telefono: 987456
-         Tipo de Licencia: A
-         Direccion: GUATEMLA" ] 
+      NDE1234567890123 [label= "DPI: 1234567890123\n         Nombre: Marisela \n         Apelliod: Arrebalo\n         Genero: Femenino\n         Telefono: 987456\n         Tipo de Licencia: A\n         Direccion: GUATEMLA" ] 
       NDE1234567890123 -> NDE1478520369874 [color=blue3][dir=both]
-      NDE1478520369874 [label= "DPI: 1478520369874
-         Nombre: Marisol 
-         Apelliod: De Leon
-         Genero: Femenino
-         Telefono: 3225
-         Tipo de Licencia: B
-         Direccion: Alemania" ] 
+      NDE1478520369874 [label= "DPI: 1478520369874\n         Nombre: Marisol \n         Apelliod: De Leon\n         Genero: Femenino\n         Telefono: 3225\n         Tipo de Licencia: B\n         Direccion: Alemania" ] 
       NDE1478520369874 -> NDE3214569879632 [color=blue3][dir=both]
-      NDE3214569879632 [label= "DPI: 3214569879632
-         Nombre: Antonio 
-         Apelliod: Del Valle
-         Genero: Masculino
-         Telefono: 99874
-         Tipo de Licencia: A
-         Direccion: Brasil" ] 
+      NDE3214569879632 [label= "DPI: 3214569879632\n         Nombre: Antonio \n         Apelliod: Del Valle\n         Genero: Masculino\n         Telefono: 99874\n         Tipo de Licencia: A\n         Direccion: Brasil" ] 
       NDE3214569879632 -> NDE5874693215635 [color=blue3][dir=both]
-      NDE5874693215635 [label= "DPI: 5874693215635
-         Nombre: Luis Esteban 
-         Apelliod: SEDR
-         Genero: Masculino
-         Telefono: 87458
-         Tipo de Licencia: B
-         Direccion: Jalapa" ] 
+      NDE5874693215635 [label= "DPI: 5874693215635\n         Nombre: Luis Esteban \n         Apelliod: SEDR\n         Genero: Masculino\n         Telefono: 87450068\n         Tipo de Licencia: B\n         Direccion: Jutiapa" ] 
       NDE5874693215635 -> NDE7463028256641 [color=blue3][dir=both]
-      NDE7463028256641 [label= "DPI: 7463028256641
-         Nombre: Marcos Javier 
-         Apelliod: Cabrera
-         Genero: Masculino
-         Telefono: 98745
-         Tipo de Licencia: C
-         Direccion: Nicaragua" ] 
+      NDE7463028256641 [label= "DPI: 7463028256641\n         Nombre: Marcos Javier \n         Apelliod: Cabrera\n         Genero: Masculino\n         Telefono: 98745\n         Tipo de Licencia: C\n         Direccion: Nicaragua" ] 
       NDE7463028256641 -> NDE8521478963001 [color=blue3][dir=both]
-      NDE8521478963001 [label= "DPI: 8521478963001
-         Nombre: Sofia Elizabeth 
-         Apelliod: JJHO
-         Genero: Femenino
-         Telefono: 20555
-         Tipo de Licencia: C
-         Direccion: Guadalajara" ] 
-      NDE8521478963001 -> NDE1234567890123 [color=blue3][dir=both]
+      NDE8521478963001 [label= "DPI: 8521478963001\n         Nombre: Sofia Elizabeth \n         Apelliod: JJHO\n         Genero: Femenino\n         Telefono: 20555\n         Tipo de Licencia: C\n         Direccion: Guadalajara" ] 
+      NDE8521478963001 -> NDE9874563210147 [color=blue3][dir=both]
+      NDE9874563210147 [label= "DPI: 9874563210147\n         Nombre: Ana Jasmin \n         Apelliod: Asterin Del Valle\n         Genero: Femenino\n         Telefono: 56225001\n         Tipo de Licencia: B\n         Direccion: 5ta Av" ] 
+      NDE9874563210147 -> NDE1234567890123 [color=blue3][dir=both]
    }
    
 }

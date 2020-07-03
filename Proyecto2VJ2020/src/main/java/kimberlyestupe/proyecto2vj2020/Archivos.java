@@ -59,7 +59,7 @@ public class Archivos {
         }
     }
     
-    //----------------ABRIR ARCHIVO-----------
+    /////////////////////////ABRIR ARCHIVO/////////////////////////
     public  String[] leerArchivo(String fileName){
         File file = new File(fileName);
         BufferedReader buffer = null;
@@ -84,6 +84,25 @@ public class Archivos {
             }
         }
         return null;
+        
+    }
+    
+    public  void HUFFMAN(String text, String fileName){
+        File file = new File(fileName);
+        BufferedWriter buffer = null;
+        try {
+            buffer = new BufferedWriter(new FileWriter(file));
+            buffer.write(text+"\n");
+        } catch (IOException e) {
+            System.out.println("Error E/S: "+e);
+        }
+        finally{
+            try {
+                buffer.close(); 
+                } catch (IOException ex) {
+                Logger.getLogger(Archivos.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
         
     }
     

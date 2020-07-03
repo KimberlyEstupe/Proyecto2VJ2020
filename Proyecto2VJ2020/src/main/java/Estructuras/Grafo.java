@@ -8,6 +8,7 @@ import kimberlyestupe.proyecto2vj2020.Archivos;
 public class Grafo {
     Archivos archivos=new Archivos();
     NVertice Inicio;
+    NVertice nbuscado;
     
     public Grafo(){
         Inicio = null;
@@ -18,17 +19,35 @@ public class Grafo {
         else return false;
     }
     
-//    private int Tamano(){
-//        int cont =0;
-//        NVertice aux = Inicio;
-//        if(!Vacio()){
-//            while(aux != null){
-//                aux = aux.SigV;
-//                cont++;
-//            }
-//        }        
-//        return cont;
-//    }
+    public int TamanoV(){
+        int cont =0;
+        NVertice aux = Inicio;
+        if(!Vacio()){
+            while(aux != null){
+                cont++;
+                aux = aux.SigV;
+            }
+        }        
+        return cont;
+    }
+    
+    public int TamanoA(){
+        int cont =0;
+        NVertice auxV = Inicio;
+        NArista auxA;
+        
+        if(!Vacio()){
+            while(auxV != null){
+                auxA = auxV.AdyAr;
+                while(auxA != null){
+                    cont++;
+                    auxA = auxA.SigA;
+                }
+                auxV = auxV.SigV;
+            }
+        }        
+        return cont;
+    }
     
     public void Insertar (String origen, String destino, int Distancia){
         NVertice NOrigen = InsertarVertice(origen);
@@ -43,8 +62,7 @@ public class Grafo {
             if(Vacio()) {
                 Inicio=nuevo;
                 return Inicio;
-            }
-            else{
+            }else{
                 NVertice aux = Inicio;
                 while(aux.SigV!= null && (!aux.Nombre.equalsIgnoreCase(nombre))){
                     aux = aux.SigV;
@@ -52,13 +70,11 @@ public class Grafo {
                 
                 if(aux.Nombre.equalsIgnoreCase(nombre)){
                     return aux;
-                }
-                else{
+                }else{
                     aux.SigV = nuevo;
                     nuevo.Valor=aux.Valor+1;
                     return nuevo;
-                }
-                
+                }                
             }
             
         }catch(Exception e){
@@ -66,8 +82,7 @@ public class Grafo {
         }
         return null;
     }
-    
-       
+           
     private void InsertarA(NVertice origen, NVertice Destino, int distancia){
         try{
             NArista nuevo = new NArista(distancia);
@@ -102,20 +117,38 @@ public class Grafo {
         
     }
     
-//    private NVertice getVetice(String Nombre){
-//        try{
-//            if(!Vacio()){
-//                NVertice aux = Inicio;
-//                while(aux != null){
-//                    if (aux.Nombre.equalsIgnoreCase(Nombre)) return aux;
-//                    aux = aux.SigV;
-//                }
-//            }
-//        }catch(Exception e){
-//            JOptionPane.showMessageDialog(null, "SE HA PRODUCIDO UN ERRO ", "ERROR", JOptionPane.ERROR_MESSAGE);
-//        }
-//        return null;
-//    }
+    public NVertice getVetice(String Nombre){
+        try{
+            if(!Vacio()){
+                NVertice aux = Inicio;
+                while(aux != null){
+                    if (aux.Nombre.equalsIgnoreCase(Nombre)) {
+                        nbuscado = aux;
+                        return aux;
+                    }
+                    aux = aux.SigV;
+                }
+            }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "SE HA PRODUCIDO UN ERRO ", "ERROR", JOptionPane.ERROR_MESSAGE);
+        }
+        return null;
+    }
+    
+    public int valorN(){
+        return 0;
+    }
+    
+    public String nombreN(String Nombre){
+        try{
+            NVertice buscar = getVetice(Nombre);
+            if (buscar!=null) return buscar.Nombre;
+            else return "";
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "SE HA PRODUCIDO UN ERRO ", "ERROR", JOptionPane.ERROR_MESSAGE);
+        }
+        return "";
+    } 
     
     // ===================================  Lista ADyacente ================================================
     public void ListaAd(){

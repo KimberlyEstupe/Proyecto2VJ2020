@@ -9,7 +9,10 @@ digraph G {
     <f0>Oviedo|
     <f1>Bilbao|
     <f2>Zaragoza|
-    <f4>Barcelon
+    <f4>Barcelona|
+    <f5>Gerona|
+    <f6>Madrid|
+    <f7>Peron
    ", height=2.5]; 
     node [shape=box3d] 
 
@@ -18,6 +21,8 @@ digraph G {
         ND01 [label= "Bilbao, 304" ] 
         ND01 -> ND06
         ND06 [label= "Madrid, 784" ] 
+        ND06 -> ND03
+        ND03 [label= "Valladolid, 504" ] 
 
    
   NA:f1 -> ND12
@@ -34,5 +39,25 @@ digraph G {
    
   NA:f4 -> ND45
         ND45 [label= "Gerona, 158" ] 
+        ND45 -> ND40
+        ND40 [label= "Oviedo, 854" ] 
+
+   
+  NA:f5 -> ND50
+        ND50 [label= "Oviedo, 1002" ] 
+
+   
+  NA:f6 -> ND63
+        ND63 [label= "Valladolid, 504" ] 
+        ND63 -> ND65
+        ND65 [label= "Gerona, 228" ] 
+
+   
+  NA:f7 -> ND72
+        ND72 [label= "Zaragoza, 184" ] 
+        ND72 -> ND71
+        ND71 [label= "Bilbao, 512" ] 
+        ND71 -> ND75
+        ND75 [label= "Gerona, 331" ] 
    
 }

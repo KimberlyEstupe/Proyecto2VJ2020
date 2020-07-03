@@ -5,4 +5,11 @@ Zaragoza/Barcelona/258%
 Barcelona/Gerona/158%
 Zaragoza/Madrid/784%
 Oviedo/Madrid/784%
-Oviedo/Valladolid/104%
+Oviedo/Valladolid/504%
+Gerona/Oviedo/1002%
+Perona/zaragoza/184%
+Barcelona/Oviedo/854%
+Madrid/Valladolid/504%
+Madrid/Gerona/228%
+Perona/Bilbao/512%
+Perona/Gerona/331%

@@ -19,7 +19,7 @@ public class BlochChain {
         NodoBuscado=null;
     }
     
-    public void Ingreso(String origen, String destino, String fecha, String hora, String deConductor, String thCliente, DoblementeEnlazada de, TablaH th){
+    public String Ingreso(String origen, String destino, String fecha, String hora, String deConductor, String thCliente, DoblementeEnlazada de, TablaH th){
         try{
             DE = de;
             TH = th;
@@ -43,11 +43,14 @@ public class BlochChain {
                         nuevo.anterior=aux;
                     }
                     JOptionPane.showMessageDialog(null, "Nuevo ingreso"); 
+                    return "Realizado";
 
                 }else JOptionPane.showMessageDialog(null, "No se encontre ese cliente ", "ERROR", JOptionPane.ERROR_MESSAGE);
             }else JOptionPane.showMessageDialog(null, "No se encontro ese conductor", "ERROR", JOptionPane.ERROR_MESSAGE);
             
-        }catch(Exception e){}
+        }catch(Exception e){           
+        }
+        return "No";
     }
     
     public String ContraseñaMD5(String input){      

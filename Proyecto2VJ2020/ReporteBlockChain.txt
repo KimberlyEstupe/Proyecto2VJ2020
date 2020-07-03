@@ -6,17 +6,9 @@ digraph G {
  rankdir = Lista; 
    node [shape=note]
    {rank=same 
-      NBC26dd19ee5f8a67b204228bd672779db8 [label= " Clave: 26dd19ee5f8a67b204228bd672779db8\n Cliente: 1478520369874, Marisol\n Conductor: 7798742547015, Tony\n Origen: Peten\n Destino: Izabal\n Fecha: 1/7/2020\n Hora: 16:42:17" ] 
-      NBC26dd19ee5f8a67b204228bd672779db8 -> NBC6ee017c177fcefe90b20e3af16b0d284 [color=darkorchid4][dir=both]
-      NBC6ee017c177fcefe90b20e3af16b0d284 [label= " Clave: 6ee017c177fcefe90b20e3af16b0d284\n Cliente: 8521478963001, Sofia Elizabeth\n Conductor: 3584500256655,  Ana Gabriera\n Origen: Mixco\n Destino: Villa Nueva\n Fecha: 1/7/2020\n Hora: 16:42:53" ] 
-      NBC6ee017c177fcefe90b20e3af16b0d284 -> NBC0a8a359dc982ffbbe29f1fd128d9c0fa [color=darkorchid4][dir=both]
-      NBC0a8a359dc982ffbbe29f1fd128d9c0fa [label= " Clave: 0a8a359dc982ffbbe29f1fd128d9c0fa\n Cliente: 3214569879632, Antonio\n Conductor: 3578946100155,  Kevin\n Origen: Peten\n Destino: Santa rosa\n Fecha: 1/7/2020\n Hora: 16:53:3" ] 
-      NBC0a8a359dc982ffbbe29f1fd128d9c0fa -> NBCc21a19c339862cbb6da1d52bff6b8dce [color=darkorchid4][dir=both]
-      NBCc21a19c339862cbb6da1d52bff6b8dce [label= " Clave: c21a19c339862cbb6da1d52bff6b8dce\n Cliente: 1478520369874, Marisol\n Conductor: 1254698745633,  Jose Carlos\n Origen: Jalapa\n Destino: Jutiapa\n Fecha: 1/7/2020\n Hora: 16:53:30" ] 
-      NBCc21a19c339862cbb6da1d52bff6b8dce -> NBC9704b87249ca855f2b8c06616fcbfea8 [color=darkorchid4][dir=both]
-      NBC9704b87249ca855f2b8c06616fcbfea8 [label= " Clave: 9704b87249ca855f2b8c06616fcbfea8\n Cliente: 1234567890123, Marisela\n Conductor: 1234567891234,  Maria del Carmen\n Origen: Escuintla\n Destino: San Marcos\n Fecha: 1/7/2020\n Hora: 16:54:54" ] 
-      NBC9704b87249ca855f2b8c06616fcbfea8 -> NBCd573d95e7f397c0676b91893764414bc [color=darkorchid4][dir=both]
-      NBCd573d95e7f397c0676b91893764414bc [label= " Clave: d573d95e7f397c0676b91893764414bc\n Cliente: 1234567890123, Marisela\n Conductor: 7798742547026, Sara\n Origen: Peten\n Destino: Zacapa\n Fecha: 1/7/2020\n Hora: 16:56:5" ] 
+      NBC04c21f1cee5ba6b580b9d57c80c960b1 [label= " Clave: 04c21f1cee5ba6b580b9d57c80c960b1\n Conductor: 1478520369874, Marisol\n Cliente: 1234567891234,  Maria del Carmen\n Origen: dd\n Destino: dd\n Fecha: 2/7/2020\n Hora: 23:10:48" ] 
+      NBC04c21f1cee5ba6b580b9d57c80c960b1 -> NBCc51b72b795147979f9e56e1d99968d68 [color=darkorchid4][dir=both]
+      NBCc51b72b795147979f9e56e1d99968d68 [label= " Clave: c51b72b795147979f9e56e1d99968d68\n Conductor: 1234567890123, Marisela\n Cliente: 9874563210123,  Maria del Rosario\n Origen: pp\n Destino: oo\n Fecha: 2/7/2020\n Hora: 23:11:12" ] 
    }
    
 }

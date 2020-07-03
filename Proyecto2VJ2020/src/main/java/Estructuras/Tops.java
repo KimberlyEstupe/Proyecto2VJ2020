@@ -95,7 +95,7 @@ public class Tops {
                 String texto="";
                 int contador = 1;
                 do{  
-                    texto +=" <br>"+contador+") "+aux.DPI+", "+aux.Nombre+" ("+aux.viajes+")";
+                    texto +=" <br>"+contador+") "+aux.DPI+", "+aux.Nombre+", "+aux.Apellido+" "+aux.Genero+" ("+aux.viajes+")";
                     aux = aux.Sig;
                     contador++;
                 }while(aux!=null && contador <=10);                
