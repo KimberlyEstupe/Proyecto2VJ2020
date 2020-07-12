@@ -55,10 +55,10 @@ public class BlochChain {
     
     public String ContraseñaMD5(String input){      
         try {
-                MessageDigest md = MessageDigest.getInstance("MD5");
-                byte[] messageDigest = md.digest(input.getBytes());
-                BigInteger number = new BigInteger(1, messageDigest);
-                String hashtext = number.toString(16);
+                MessageDigest md = MessageDigest.getInstance("MD5");//Seleciona el metodo o tipo de algoritmo
+                byte[] messageDigest = md.digest(input.getBytes());//Se digiere 
+                BigInteger number = new BigInteger(1, messageDigest);//almacena todo en un gran numero
+                String hashtext = number.toString(16);// lo convierte en estring 
 
                 while (hashtext.length() < 32) {
                     hashtext = "0" + hashtext;

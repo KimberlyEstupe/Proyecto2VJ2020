@@ -16,17 +16,7 @@ public class Menu {
         TablaH TH = new TablaH();
         BlochChain BC = new BlochChain();
         Grafo G = new Grafo();
-          
         RutasIn RI= new RutasIn(DE, TH, G, BC);
         RI.setVisible(true);
-//            Grafo G = new Grafo();
-//            G.CargMasivaA("Rutas.txt");
-//            G.ListaAd();
-//            G.RecorridoG();
-//            System.out.println("Aristas: "+G.TamanoA()+" Vrtices: "+G.TamanoV());
-//            
-            
-
     }
-    
 }

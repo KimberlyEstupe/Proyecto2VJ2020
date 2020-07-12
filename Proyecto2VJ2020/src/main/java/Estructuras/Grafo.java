@@ -19,6 +19,7 @@ public class Grafo {
         else return false;
     }
     
+    //------------------* CANTIDAD DE VERTICES *---------------------------------
     public int TamanoV(){
         int cont =0;
         NVertice aux = Inicio;
@@ -31,6 +32,7 @@ public class Grafo {
         return cont;
     }
     
+    //------------------* CANTIDAD DE ARISTAS *---------------------------------
     public int TamanoA(){
         int cont =0;
         NVertice auxV = Inicio;
@@ -50,27 +52,33 @@ public class Grafo {
     }
     
     public void Insertar (String origen, String destino, int Distancia){
+        //Inserta primero vertices
         NVertice NOrigen = InsertarVertice(origen);
         NVertice NDestino = InsertarVertice(destino);
+        
+        //Une los vertices con una aristas de un peso o distancia determinada
         InsertarA(NOrigen, NDestino, Distancia);
     }
     
+    //Vetcies es una lista simplemente enlazada (es un grafo diriguido en una direción)
     private NVertice InsertarVertice(String nombre){
         try{
             NVertice nuevo = new NVertice(nombre);
             
-            if(Vacio()) {
+            if(Vacio()) {//Es el primer vertice ingresado
                 Inicio=nuevo;
                 return Inicio;
             }else{
                 NVertice aux = Inicio;
+                
+                //Busca el ultimo vertice o uno repetido
                 while(aux.SigV!= null && (!aux.Nombre.equalsIgnoreCase(nombre))){
                     aux = aux.SigV;
                 }
                 
-                if(aux.Nombre.equalsIgnoreCase(nombre)){
+                if(aux.Nombre.equalsIgnoreCase(nombre)){//Si el vertice ya existe lo devuelve 
                     return aux;
-                }else{
+                }else{//Si es nevo lo inserta y devulve ese
                     aux.SigV = nuevo;
                     nuevo.Valor=aux.Valor+1;
                     return nuevo;
@@ -82,21 +90,24 @@ public class Grafo {
         }
         return null;
     }
-           
+      
+    
+    //Aristas es una lista:   VerticeOrigen -> Arsita1 -> Arista2 -> Arista3 ...
+    // Luego Arista apuntara a VerticeDestino 
     private void InsertarA(NVertice origen, NVertice Destino, int distancia){
         try{
             NArista nuevo = new NArista(distancia);
-            NArista aux = origen.AdyAr;
+            NArista aux = origen.AdyAr;//Apunta a la Arista1
             
-            if(aux == null){
-                origen.AdyAr = nuevo;
-                nuevo.AdyVer = Destino;
-            }else{
+            if(aux == null){//Si Arista1 es nula
+                origen.AdyAr = nuevo;//Apunta a la nueva arista
+                nuevo.AdyVer = Destino;// Apunta la arista a destino
+            }else{//Si no es la primera busca hasta encontrar la ultimo y la inserta
                 while(aux.SigA != null){
                     aux=aux.SigA;
                 } 
-                aux.SigA=nuevo;
-                nuevo.AdyVer = Destino;
+                aux.SigA=nuevo; //Apunta auxilir a la nueva arista:  Arsita1 -> Arista2 -> Arista3
+                nuevo.AdyVer = Destino;// Apunta la arista a destino
             }
             
         }catch(Exception e){
@@ -104,7 +115,7 @@ public class Grafo {
         }
     }
     
-    public void CargMasivaA(String filaname){
+    public void CargMasivaA(String filaname){//Lee un archivo de texto: Origen(String)/Destino(String)/Distancia(int)%
         String leer[]= archivos.leerArchivo(filaname);  
         String juntos;
         String divicion[];
@@ -117,7 +128,7 @@ public class Grafo {
         
     }
     
-    public NVertice getVetice(String Nombre){
+    public NVertice getVetice(String Nombre){// Deveulve un vertice
         try{
             if(!Vacio()){
                 NVertice aux = Inicio;
@@ -135,13 +146,11 @@ public class Grafo {
         return null;
     }
     
-    public int valorN(){
-        return 0;
-    }
+   
     
-    public String nombreN(String Nombre){
+    public String nombreN(String Nombre){// Deveulve el nombre del vertice 
         try{
-            NVertice buscar = getVetice(Nombre);
+            NVertice buscar = getVetice(Nombre); //Busca el vertice
             if (buscar!=null) return buscar.Nombre;
             else return "";
         }catch(Exception e){
@@ -201,20 +210,27 @@ public class Grafo {
                 NVertice AuxV = Inicio;
                 NArista AuxA;
                 String texto="   node [shape = ellipse ]\n";
-                do{
-                    AuxA=AuxV.AdyAr;
-                    texto+="   NG"+AuxV.Valor+" [label= \""+AuxV.Nombre+"\" ] \n";
-                    if(AuxA!=null){
+                
+                do{                    
+                    texto+="   NG"+AuxV.Valor+" [label= \""+AuxV.Nombre+"\" ] \n"; //Crea los vertices sin importar si es origen o destino
+                    
+                    AuxA=AuxV.AdyAr;//Aux apunta a la primera arista del vertice                    
+                    if(AuxA!=null){// Si aux es diferente de nulo singnifica que el vertive es un origen y entra en el siclo
+                                   //Si aux es nulo significa que llego a un destino sin 
                         do{
                             texto+="   NG"+AuxV.Valor+" -> NG"+AuxA.AdyVer.Valor+"[label= \""+AuxA.Distancia+"\", color=brown1]\n"; 
+                            // NodoORIGEN -> NodoDESTINO ( AuxA.AdyVer.Valor representa a destino ).
+                            // Label graficara la distancia entre los nodos
                             AuxA=AuxA.SigA;
-                        }while(AuxA!=null);
+                        }while(AuxA!=null); //El ciclo termina cuando ya no haya mas aristas en el vertice  
                         
-                    }
+                    }// cierre de if de arista
+                    
                     AuxV=AuxV.SigV;
                 }while(AuxV != null);
+                
                 archivos.Archivo("MAPA DE RUTAS ", texto, "Grafo.txt");
-            }
+            }// cierra de verificacion que la lista no este vacia 
             
         }catch(Exception e){            
             JOptionPane.showMessageDialog(null, "SE HA PRODUCIDO UN ERRO ", "ERROR", JOptionPane.ERROR_MESSAGE);

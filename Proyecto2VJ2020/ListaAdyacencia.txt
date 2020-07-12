@@ -6,58 +6,150 @@ digraph G {
  rankdir=LR; 
    node [shape=record,width=.1,height=.1]; 
    NA [label = " 
-    <f0>Oviedo|
-    <f1>Bilbao|
-    <f2>Zaragoza|
-    <f4>Barcelona|
-    <f5>Gerona|
-    <f6>Madrid|
-    <f7>Peron
+    <f0>Cadiz|
+    <f1>Sevilla|
+    <f2>Granada|
+    <f3>Jaen|
+    <f4>Murcia|
+    <f5>Madrid|
+    <f6>Valencia|
+    <f7>Albacete|
+    <f8>Barcelona|
+    <f9>Gerona|
+    <f10>Zaragoza|
+    <f11>Badajoz|
+    <f12>Valladolid|
+    <f13>Vigo|
+    <f14>Coruna|
+    <f15>Bilbao|
+    <f16>Ovied
    ", height=2.5]; 
     node [shape=box3d] 
 
    
   NA:f0 -> ND01
-        ND01 [label= "Bilbao, 304" ] 
-        ND01 -> ND06
-        ND06 [label= "Madrid, 784" ] 
-        ND06 -> ND03
-        ND03 [label= "Valladolid, 504" ] 
+        ND01 [label= "Sevilla, 125" ] 
 
    
-  NA:f1 -> ND12
-        ND12 [label= "Zaragoza, 324" ] 
+  NA:f1 -> ND10
+        ND10 [label= "Cadiz, 125" ] 
+        ND10 -> ND12
+        ND12 [label= "Granada, 256" ] 
         ND12 -> ND13
-        ND13 [label= "Valladolid, 338" ] 
+        ND13 [label= "Jaen, 242" ] 
 
    
-  NA:f2 -> ND24
-        ND24 [label= "Barcelona, 258" ] 
-        ND24 -> ND26
-        ND26 [label= "Madrid, 784" ] 
+  NA:f2 -> ND21
+        ND21 [label= "Sevilla, 256" ] 
+        ND21 -> ND23
+        ND23 [label= "Jaen, 99" ] 
+        ND23 -> ND24
+        ND24 [label= "Murcia, 278" ] 
 
    
-  NA:f4 -> ND45
-        ND45 [label= "Gerona, 158" ] 
-        ND45 -> ND40
-        ND40 [label= "Oviedo, 854" ] 
+  NA:f3 -> ND31
+        ND31 [label= "Sevilla, 242" ] 
+        ND31 -> ND32
+        ND32 [label= "Granada, 99" ] 
+        ND32 -> ND35
+        ND35 [label= "Madrid, 335" ] 
 
    
-  NA:f5 -> ND50
-        ND50 [label= "Oviedo, 1002" ] 
+  NA:f4 -> ND42
+        ND42 [label= "Granada, 278" ] 
+        ND42 -> ND46
+        ND46 [label= "Valencia, 241" ] 
+        ND46 -> ND47
+        ND47 [label= "Albacete, 150" ] 
 
    
-  NA:f6 -> ND63
-        ND63 [label= "Valladolid, 504" ] 
-        ND63 -> ND65
-        ND65 [label= "Gerona, 228" ] 
+  NA:f5 -> ND53
+        ND53 [label= "Jaen, 335" ] 
+        ND53 -> ND57
+        ND57 [label= "Albacete, 251" ] 
+        ND57 -> ND510
+        ND510 [label= "Zaragoza, 325" ] 
+        ND510 -> ND511
+        ND511 [label= "Badajoz, 403" ] 
+        ND511 -> ND512
+        ND512 [label= "Valladolid, 193" ] 
+        ND512 -> ND515
+        ND515 [label= "Bilbao, 395" ] 
 
    
-  NA:f7 -> ND72
-        ND72 [label= "Zaragoza, 184" ] 
-        ND72 -> ND71
-        ND71 [label= "Bilbao, 512" ] 
-        ND71 -> ND75
-        ND75 [label= "Gerona, 331" ] 
+  NA:f6 -> ND64
+        ND64 [label= "Murcia, 241" ] 
+        ND64 -> ND67
+        ND67 [label= "Albacete, 191" ] 
+        ND67 -> ND68
+        ND68 [label= "Barcelona, 349" ] 
+
+   
+  NA:f7 -> ND74
+        ND74 [label= "Murcia, 150" ] 
+        ND74 -> ND76
+        ND76 [label= "Valencia, 191" ] 
+        ND76 -> ND75
+        ND75 [label= "Madrid, 251" ] 
+
+   
+  NA:f8 -> ND86
+        ND86 [label= "Valencia, 349" ] 
+        ND86 -> ND89
+        ND89 [label= "Gerona, 100" ] 
+        ND89 -> ND810
+        ND810 [label= "Zaragoza, 296" ] 
+
+   
+  NA:f9 -> ND98
+        ND98 [label= "Barcelona, 100" ] 
+
+   
+  NA:f10 -> ND108
+        ND108 [label= "Barcelona, 296" ] 
+        ND108 -> ND105
+        ND105 [label= "Madrid, 325" ] 
+        ND105 -> ND1015
+        ND1015 [label= "Bilbao, 324" ] 
+
+   
+  NA:f11 -> ND115
+        ND115 [label= "Madrid, 403" ] 
+
+   
+  NA:f12 -> ND125
+        ND125 [label= "Madrid, 193" ] 
+        ND125 -> ND1213
+        ND1213 [label= "Vigo, 356" ] 
+        ND1213 -> ND1214
+        ND1214 [label= "Coruna, 455" ] 
+        ND1214 -> ND1215
+        ND1215 [label= "Bilbao, 280" ] 
+
+   
+  NA:f13 -> ND1312
+        ND1312 [label= "Valladolid, 356" ] 
+        ND1312 -> ND1314
+        ND1314 [label= "Coruna, 171" ] 
+
+   
+  NA:f14 -> ND1412
+        ND1412 [label= "Valladolid, 455" ] 
+        ND1412 -> ND1413
+        ND1413 [label= "Vigo, 171" ] 
+
+   
+  NA:f15 -> ND1512
+        ND1512 [label= "Valladolid, 280" ] 
+        ND1512 -> ND155
+        ND155 [label= "Madrid, 395" ] 
+        ND155 -> ND1510
+        ND1510 [label= "Zaragoza, 324" ] 
+        ND1510 -> ND1516
+        ND1516 [label= "Oviedo, 304" ] 
+
+   
+  NA:f16 -> ND1615
+        ND1615 [label= "Bilbao, 304" ] 
    
 }

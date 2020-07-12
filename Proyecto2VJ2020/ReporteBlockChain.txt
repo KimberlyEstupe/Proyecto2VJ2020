@@ -6,9 +6,15 @@ digraph G {
  rankdir = Lista; 
    node [shape=note]
    {rank=same 
-      NBC04c21f1cee5ba6b580b9d57c80c960b1 [label= " Clave: 04c21f1cee5ba6b580b9d57c80c960b1\n Conductor: 1478520369874, Marisol\n Cliente: 1234567891234,  Maria del Carmen\n Origen: dd\n Destino: dd\n Fecha: 2/7/2020\n Hora: 23:10:48" ] 
-      NBC04c21f1cee5ba6b580b9d57c80c960b1 -> NBCc51b72b795147979f9e56e1d99968d68 [color=darkorchid4][dir=both]
-      NBCc51b72b795147979f9e56e1d99968d68 [label= " Clave: c51b72b795147979f9e56e1d99968d68\n Conductor: 1234567890123, Marisela\n Cliente: 9874563210123,  Maria del Rosario\n Origen: pp\n Destino: oo\n Fecha: 2/7/2020\n Hora: 23:11:12" ] 
+      NBC6b8388222b06ad0b6499f85860f15aea [label= " Clave: 6b8388222b06ad0b6499f85860f15aea\n Conductor: 1000853700100,  Susan\n Cliente: 3000853708101,  Surely\n Origen: Guatemala\n Destino: Peten\n Fecha: 5/7/2020\n Hora: 12:8:51" ] 
+      NBC6b8388222b06ad0b6499f85860f15aea -> NBC820f577a2779b9a46514c57ef7e7eec1 [color=darkorchid4][dir=both]
+      NBC820f577a2779b9a46514c57ef7e7eec1 [label= " Clave: 820f577a2779b9a46514c57ef7e7eec1\n Conductor: 1000853700113,  Alexandra\n Cliente: 3003102260101, Kimberly\n Origen: Peten\n Destino: Izabal\n Fecha: 5/7/2020\n Hora: 12:9:39" ] 
+      NBC820f577a2779b9a46514c57ef7e7eec1 -> NBC8d1451f52abb27e08d12b76ed1ac4c09 [color=darkorchid4][dir=both]
+      NBC8d1451f52abb27e08d12b76ed1ac4c09 [label= " Clave: 8d1451f52abb27e08d12b76ed1ac4c09\n Conductor: 1000853700114,  Leonor\n Cliente: 3003102260101, Kimberly\n Origen: Izabal\n Destino: Jalapa\n Fecha: 5/7/2020\n Hora: 12:10:16" ] 
+      NBC8d1451f52abb27e08d12b76ed1ac4c09 -> NBC51567305252fc33f8b556b72024a9996 [color=darkorchid4][dir=both]
+      NBC51567305252fc33f8b556b72024a9996 [label= " Clave: 51567305252fc33f8b556b72024a9996\n Conductor: 1000853700103,  Melissa\n Cliente: 3000853700601,  Raul\n Origen: Jalapa\n Destino: Jutiapa\n Fecha: 5/7/2020\n Hora: 12:11:2" ] 
+      NBC51567305252fc33f8b556b72024a9996 -> NBC196799dc62d50207035f1968fad0a747 [color=darkorchid4][dir=both]
+      NBC196799dc62d50207035f1968fad0a747 [label= " Clave: 196799dc62d50207035f1968fad0a747\n Conductor: 1000853700113,  Alexandra\n Cliente: 3000853700301,  Maximiliano\n Origen: Jalapa\n Destino: Jutipa\n Fecha: 5/7/2020\n Hora: 12:11:41" ] 
    }
    
 }
